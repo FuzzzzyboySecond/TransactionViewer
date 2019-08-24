@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let appContainer = AppContainer()
+    let appContainer = AppContainer().container
+    lazy var appLauncher: AppLauncher! = {
+        return appContainer.resolve(AppLauncher.self)
+    }()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window = appLauncher?.generateWindows()
         return true
     }
 
