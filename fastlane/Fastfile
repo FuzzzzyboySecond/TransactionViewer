@@ -23,7 +23,15 @@ platform :ios do
               devices: ["iPhone Xʀ"],
               scheme: "TransactionViewer",
               code_coverage: true,
-              clean: true)
+              clean: true
+      )
   end
+
+  desc "Run lint"
+lane :lint do
+    swiftlint(
+      strict: true
+    )
+end
 
 end
