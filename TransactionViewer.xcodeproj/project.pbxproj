@@ -210,7 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, run mint install swiftlint\"\nexit 1\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, run brew install swiftlint\"\nexit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
