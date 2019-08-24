@@ -3,5 +3,7 @@ osx_image: xcode10.3
 language: swift
 install:
     - bundle install
+    - mint install swiftlint
 script:
     - bundle exec fastlane tests
+    - bundle exec fastlane lint
