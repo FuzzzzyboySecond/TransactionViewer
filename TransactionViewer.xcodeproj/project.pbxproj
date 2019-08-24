@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1778DBA162FF3410AC2CF01F /* libPods-TransactionViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEAE483A9B2EA56001CB8E2 /* libPods-TransactionViewer.a */; };
+		8F2EA8342F34BCA53DA18925 /* libPods-TransactionViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF22486B50C050559F930D1 /* libPods-TransactionViewerTests.a */; };
 		BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A091E231135C50041B1DB /* AppDelegate.swift */; };
 		BA3A0921231135C50041B1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A0920231135C50041B1DB /* ViewController.swift */; };
 		BA3A0924231135C50041B1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0922231135C50041B1DB /* Main.storyboard */; };
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AF22486B50C050559F930D1 /* libPods-TransactionViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		330B7D7D6260A5208F788E7B /* Pods-TransactionViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewer.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewer/Pods-TransactionViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		55DC0298BC52A96B930B80C8 /* Pods-TransactionViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.release.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		9FEAE483A9B2EA56001CB8E2 /* libPods-TransactionViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A091B231135C50041B1DB /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A091E231135C50041B1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3A0920231135C50041B1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerTests.swift; sourceTree = "<group>"; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F81E899600599C675914F734 /* Pods-TransactionViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewer.release.xcconfig"; path = "Target Support Files/Pods-TransactionViewer/Pods-TransactionViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1778DBA162FF3410AC2CF01F /* libPods-TransactionViewer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2EA8342F34BCA53DA18925 /* libPods-TransactionViewerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		675AFF6D687FD19547B7F644 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FEAE483A9B2EA56001CB8E2 /* libPods-TransactionViewer.a */,
+				0AF22486B50C050559F930D1 /* libPods-TransactionViewerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		735F4C3A27C65C4F0B9D1B38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				330B7D7D6260A5208F788E7B /* Pods-TransactionViewer.debug.xcconfig */,
+				F81E899600599C675914F734 /* Pods-TransactionViewer.release.xcconfig */,
+				BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */,
+				55DC0298BC52A96B930B80C8 /* Pods-TransactionViewerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA3A0912231135C50041B1DB = {
 			isa = PBXGroup;
 			children = (
 				BA3A091D231135C50041B1DB /* TransactionViewer */,
 				BA7FC0B223114CCA00EE5233 /* TransactionViewerTests */,
 				BA3A091C231135C50041B1DB /* Products */,
+				735F4C3A27C65C4F0B9D1B38 /* Pods */,
+				675AFF6D687FD19547B7F644 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA3A092D231135C60041B1DB /* Build configuration list for PBXNativeTarget "TransactionViewer" */;
 			buildPhases = (
+				A8D173101D267E2DF8BA0992 /* [CP] Check Pods Manifest.lock */,
 				BA3A0917231135C50041B1DB /* Sources */,
 				BA3A0918231135C50041B1DB /* Frameworks */,
 				BA7FC0BC2311658500EE5233 /* Run Swiftlint */,
@@ -121,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA7FC0BA23114CCA00EE5233 /* Build configuration list for PBXNativeTarget "TransactionViewerTests" */;
 			buildPhases = (
+				3D8671958CB22EA22617C07D /* [CP] Check Pods Manifest.lock */,
 				BA7FC0AD23114CCA00EE5233 /* Sources */,
 				BA7FC0AE23114CCA00EE5233 /* Frameworks */,
 				BA7FC0AF23114CCA00EE5233 /* Resources */,
@@ -194,6 +228,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D8671958CB22EA22617C07D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransactionViewerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8D173101D267E2DF8BA0992 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransactionViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BA7FC0BC2311658500EE5233 /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,7 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, run brew install swiftlint\"\nexit 1\nfi\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -313,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -368,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -380,6 +458,7 @@
 		};
 		BA3A092E231135C60041B1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330B7D7D6260A5208F788E7B /* Pods-TransactionViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,6 +477,7 @@
 		};
 		BA3A092F231135C60041B1DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F81E899600599C675914F734 /* Pods-TransactionViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +496,7 @@
 		};
 		BA7FC0B823114CCA00EE5233 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +517,7 @@
 		};
 		BA7FC0B923114CCA00EE5233 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DC0298BC52A96B930B80C8 /* Pods-TransactionViewerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
