@@ -13,12 +13,12 @@ final class AppContainer {
     let container = Container()
 
     init() {
-        registerAppLauncher()
+        registerAppCoordinator()
     }
 
-    private func registerAppLauncher() {
-        container.register(AppLauncher.self) { _ in
-            BaseAppLauncher()
+    private func registerAppCoordinator() {
+        container.register(AppCoordinator.self) { _ in
+            BaseAppCoordinator()
         }
     }
 

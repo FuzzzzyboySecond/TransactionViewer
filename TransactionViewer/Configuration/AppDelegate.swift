@@ -13,13 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let appContainer = AppContainer().container
-    lazy var appLauncher: AppLauncher! = {
-        return appContainer.resolve(AppLauncher.self)
+
+    lazy var appCoordinator: AppCoordinator = {
+        return appContainer.resolve(AppCoordinator.self)!
     }()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = appLauncher?.generateWindows()
+        appCoordinator.start(in: window)
         return true
     }
 

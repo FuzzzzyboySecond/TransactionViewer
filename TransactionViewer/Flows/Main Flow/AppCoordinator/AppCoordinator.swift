@@ -9,5 +9,5 @@
 import UIKit
 
 protocol AppCoordinator {
-    func start()
+    func start(in window: UIWindow?)
 }

@@ -10,23 +10,22 @@ import UIKit
 
 final class BaseAppCoordinator: AppCoordinator {
 
-    private let window: UIWindow
-    private var navigationController: UINavigationController?
+    var window: UIWindow?
 
-    init(window: UIWindow) {
-        self.window = window
+    private var rootViewController: UINavigationController?
+
+    init() {
         configureRootViewController()
-        window.rootViewController = navigationController
     }
 
-    func start() {
-        window.makeKeyAndVisible()
+    func start(in window: UIWindow?) {
+        window?.rootViewController = rootViewController
     }
 
     private func configureRootViewController() {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .red
-        navigationController = UINavigationController(rootViewController: viewController)
+        rootViewController = UINavigationController(rootViewController: viewController)
     }
 
 }
