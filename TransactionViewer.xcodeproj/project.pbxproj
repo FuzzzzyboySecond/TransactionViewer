@@ -17,7 +17,7 @@
 		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
 		BA5BBF13231199E500A48AB5 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF12231199E500A48AB5 /* AppLauncher.swift */; };
 		BA5BBF1523119A2100A48AB5 /* BaseAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1423119A2100A48AB5 /* BaseAppLauncher.swift */; };
-		BA7FC0B423114CCA00EE5233 /* TransactionViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */; };
+		BA5BBF1823119BE000A48AB5 /* AppLauncherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1723119BE000A48AB5 /* AppLauncherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,8 @@
 		BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		BA5BBF12231199E500A48AB5 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 		BA5BBF1423119A2100A48AB5 /* BaseAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppLauncher.swift; sourceTree = "<group>"; };
+		BA5BBF1723119BE000A48AB5 /* AppLauncherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncherTests.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerTests.swift; sourceTree = "<group>"; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F81E899600599C675914F734 /* Pods-TransactionViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewer.release.xcconfig"; path = "Target Support Files/Pods-TransactionViewer/Pods-TransactionViewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,10 +152,18 @@
 			path = AppLauncher;
 			sourceTree = "<group>";
 		};
+		BA5BBF1623119BC500A48AB5 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BA5BBF1723119BE000A48AB5 /* AppLauncherTests.swift */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
 		BA7FC0B223114CCA00EE5233 /* TransactionViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */,
+				BA5BBF1623119BC500A48AB5 /* Business Logic */,
 				BA7FC0B523114CCA00EE5233 /* Info.plist */,
 			);
 			path = TransactionViewerTests;
@@ -342,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7FC0B423114CCA00EE5233 /* TransactionViewerTests.swift in Sources */,
+				BA5BBF1823119BE000A48AB5 /* AppLauncherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
