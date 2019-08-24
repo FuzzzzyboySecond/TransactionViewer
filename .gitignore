@@ -23,6 +23,9 @@ fastlane/screenshots/screenshots.html
 # scan temporary files
 fastlane/test_output
 
+# swiftlint report files
+swiftlint-results.html
+
 ### macOS ###
 # General
 .DS_Store
