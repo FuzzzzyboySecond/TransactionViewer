@@ -15,9 +15,9 @@
 		BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0925231135C60041B1DB /* Assets.xcassets */; };
 		BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0927231135C60041B1DB /* LaunchScreen.storyboard */; };
 		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
-		BA5BBF13231199E500A48AB5 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF12231199E500A48AB5 /* AppLauncher.swift */; };
-		BA5BBF1523119A2100A48AB5 /* BaseAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1423119A2100A48AB5 /* BaseAppLauncher.swift */; };
-		BA5BBF1823119BE000A48AB5 /* AppLauncherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1723119BE000A48AB5 /* AppLauncherTests.swift */; };
+		BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */; };
+		BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */; };
+		BA5BBF212311CD2B00A48AB5 /* TransactionViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF202311CD2B00A48AB5 /* TransactionViewerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +43,9 @@
 		BA3A0928231135C60041B1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3A092A231135C60041B1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		BA5BBF12231199E500A48AB5 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
-		BA5BBF1423119A2100A48AB5 /* BaseAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppLauncher.swift; sourceTree = "<group>"; };
-		BA5BBF1723119BE000A48AB5 /* AppLauncherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncherTests.swift; sourceTree = "<group>"; };
+		BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppCoordinator.swift; sourceTree = "<group>"; };
+		BA5BBF202311CD2B00A48AB5 /* TransactionViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerTests.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +115,8 @@
 		BA3A091D231135C50041B1DB /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BA5BBF092311915100A48AB5 /* Business Logic */,
+				BA5BBF1923119EED00A48AB5 /* Flows */,
+				BA5BBF092311915100A48AB5 /* Configuration */,
 				BA3A0920231135C50041B1DB /* ViewController.swift */,
 				BA3A0922231135C50041B1DB /* Main.storyboard */,
 				BA3A0925231135C60041B1DB /* Assets.xcassets */,
@@ -125,14 +126,13 @@
 			path = TransactionViewer;
 			sourceTree = "<group>";
 		};
-		BA5BBF092311915100A48AB5 /* Business Logic */ = {
+		BA5BBF092311915100A48AB5 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				BA3A091E231135C50041B1DB /* AppDelegate.swift */,
-				BA5BBF11231199D800A48AB5 /* AppLauncher */,
 				BA5BBF0A2311917100A48AB5 /* DIContainer */,
 			);
-			path = "Business Logic";
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		BA5BBF0A2311917100A48AB5 /* DIContainer */ = {
@@ -143,28 +143,36 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
-		BA5BBF11231199D800A48AB5 /* AppLauncher */ = {
+		BA5BBF1923119EED00A48AB5 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				BA5BBF12231199E500A48AB5 /* AppLauncher.swift */,
-				BA5BBF1423119A2100A48AB5 /* BaseAppLauncher.swift */,
+				BA5BBF1A23119EFF00A48AB5 /* Main Flow */,
 			);
-			path = AppLauncher;
+			path = Flows;
 			sourceTree = "<group>";
 		};
-		BA5BBF1623119BC500A48AB5 /* Business Logic */ = {
+		BA5BBF1A23119EFF00A48AB5 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
-				BA5BBF1723119BE000A48AB5 /* AppLauncherTests.swift */,
+				BA5BBF1B23119F1500A48AB5 /* AppCoordinator */,
 			);
-			path = "Business Logic";
+			path = "Main Flow";
+			sourceTree = "<group>";
+		};
+		BA5BBF1B23119F1500A48AB5 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */,
+				BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 		BA7FC0B223114CCA00EE5233 /* TransactionViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA5BBF1623119BC500A48AB5 /* Business Logic */,
 				BA7FC0B523114CCA00EE5233 /* Info.plist */,
+				BA5BBF202311CD2B00A48AB5 /* TransactionViewerTests.swift */,
 			);
 			path = TransactionViewerTests;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 					};
 					BA7FC0B023114CCA00EE5233 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = BA3A091A231135C50041B1DB;
 					};
 				};
@@ -338,11 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5BBF1523119A2100A48AB5 /* BaseAppLauncher.swift in Sources */,
+				BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */,
+				BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */,
 				BA3A0921231135C50041B1DB /* ViewController.swift in Sources */,
 				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
 				BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */,
-				BA5BBF13231199E500A48AB5 /* AppLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5BBF1823119BE000A48AB5 /* AppLauncherTests.swift in Sources */,
+				BA5BBF212311CD2B00A48AB5 /* TransactionViewerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +552,7 @@
 			baseConfigurationReference = BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3R3Z3JF3Q;
 				INFOPLIST_FILE = TransactionViewerTests/Info.plist;
@@ -553,6 +563,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shakhansky.kirill.TransactionViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionViewer.app/TransactionViewer";
@@ -564,6 +575,7 @@
 			baseConfigurationReference = 55DC0298BC52A96B930B80C8 /* Pods-TransactionViewerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3R3Z3JF3Q;
 				INFOPLIST_FILE = TransactionViewerTests/Info.plist;
