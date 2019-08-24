@@ -12,7 +12,18 @@
 		BA3A0924231135C50041B1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0922231135C50041B1DB /* Main.storyboard */; };
 		BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0925231135C60041B1DB /* Assets.xcassets */; };
 		BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0927231135C60041B1DB /* LaunchScreen.storyboard */; };
+		BA7FC0B423114CCA00EE5233 /* TransactionViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA7FC0B623114CCA00EE5233 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA3A0913231135C50041B1DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA3A091A231135C50041B1DB;
+			remoteInfo = TransactionViewer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BA3A091B231135C50041B1DB /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +33,20 @@
 		BA3A0925231135C60041B1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3A0928231135C60041B1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3A092A231135C60041B1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerTests.swift; sourceTree = "<group>"; };
+		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BA3A0918231135C50041B1DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7FC0AE23114CCA00EE5233 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3A091D231135C50041B1DB /* TransactionViewer */,
+				BA7FC0B223114CCA00EE5233 /* TransactionViewerTests */,
 				BA3A091C231135C50041B1DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3A091B231135C50041B1DB /* TransactionViewer.app */,
+				BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +85,15 @@
 				BA3A092A231135C60041B1DB /* Info.plist */,
 			);
 			path = TransactionViewer;
+			sourceTree = "<group>";
+		};
+		BA7FC0B223114CCA00EE5233 /* TransactionViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */,
+				BA7FC0B523114CCA00EE5233 /* Info.plist */,
+			);
+			path = TransactionViewerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +116,24 @@
 			productReference = BA3A091B231135C50041B1DB /* TransactionViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BA7FC0B023114CCA00EE5233 /* TransactionViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA7FC0BA23114CCA00EE5233 /* Build configuration list for PBXNativeTarget "TransactionViewerTests" */;
+			buildPhases = (
+				BA7FC0AD23114CCA00EE5233 /* Sources */,
+				BA7FC0AE23114CCA00EE5233 /* Frameworks */,
+				BA7FC0AF23114CCA00EE5233 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA7FC0B723114CCA00EE5233 /* PBXTargetDependency */,
+			);
+			name = TransactionViewerTests;
+			productName = TransactionViewerTests;
+			productReference = BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +146,10 @@
 				TargetAttributes = {
 					BA3A091A231135C50041B1DB = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					BA7FC0B023114CCA00EE5233 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = BA3A091A231135C50041B1DB;
 					};
 				};
 			};
@@ -113,6 +167,7 @@
 			projectRoot = "";
 			targets = (
 				BA3A091A231135C50041B1DB /* TransactionViewer */,
+				BA7FC0B023114CCA00EE5233 /* TransactionViewerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +183,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA7FC0AF23114CCA00EE5233 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA7FC0AD23114CCA00EE5233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7FC0B423114CCA00EE5233 /* TransactionViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA7FC0B723114CCA00EE5233 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA3A091A231135C50041B1DB /* TransactionViewer */;
+			targetProxy = BA7FC0B623114CCA00EE5233 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BA3A0922231135C50041B1DB /* Main.storyboard */ = {
@@ -314,6 +392,46 @@
 			};
 			name = Release;
 		};
+		BA7FC0B823114CCA00EE5233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3R3Z3JF3Q;
+				INFOPLIST_FILE = TransactionViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shakhansky.kirill.TransactionViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionViewer.app/TransactionViewer";
+			};
+			name = Debug;
+		};
+		BA7FC0B923114CCA00EE5233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3R3Z3JF3Q;
+				INFOPLIST_FILE = TransactionViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shakhansky.kirill.TransactionViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionViewer.app/TransactionViewer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +449,15 @@
 			buildConfigurations = (
 				BA3A092E231135C60041B1DB /* Debug */,
 				BA3A092F231135C60041B1DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA7FC0BA23114CCA00EE5233 /* Build configuration list for PBXNativeTarget "TransactionViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA7FC0B823114CCA00EE5233 /* Debug */,
+				BA7FC0B923114CCA00EE5233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
