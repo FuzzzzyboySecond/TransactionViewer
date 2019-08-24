@@ -2,6 +2,6 @@ os: osx
 osx_image: xcode10.3
 language: swift
 xcode_project: TransactionViewer.xcodeproj
-xcode_scheme: TransactionViewerTests
+xcode_scheme: TransactionViewer
 xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone XR
     
