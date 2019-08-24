@@ -2,6 +2,7 @@ os: osx
 osx_image: xcode10.3
 language: swift
 install:
+    - brew install mint
     - bundle install
     - mint install swiftlint
 script:
