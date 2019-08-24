@@ -14,6 +14,7 @@
 		BA3A0924231135C50041B1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0922231135C50041B1DB /* Main.storyboard */; };
 		BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0925231135C60041B1DB /* Assets.xcassets */; };
 		BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0927231135C60041B1DB /* LaunchScreen.storyboard */; };
+		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
 		BA7FC0B423114CCA00EE5233 /* TransactionViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		BA3A0925231135C60041B1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3A0928231135C60041B1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3A092A231135C60041B1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B323114CCA00EE5233 /* TransactionViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerTests.swift; sourceTree = "<group>"; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		BA3A091D231135C50041B1DB /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
+				BA5BBF092311915100A48AB5 /* Business Logic */,
 				BA3A091E231135C50041B1DB /* AppDelegate.swift */,
 				BA3A0920231135C50041B1DB /* ViewController.swift */,
 				BA3A0922231135C50041B1DB /* Main.storyboard */,
@@ -117,6 +120,22 @@
 				BA3A092A231135C60041B1DB /* Info.plist */,
 			);
 			path = TransactionViewer;
+			sourceTree = "<group>";
+		};
+		BA5BBF092311915100A48AB5 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BA5BBF0A2311917100A48AB5 /* DIContainer */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		BA5BBF0A2311917100A48AB5 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */,
+			);
+			path = DIContainer;
 			sourceTree = "<group>";
 		};
 		BA7FC0B223114CCA00EE5233 /* TransactionViewerTests */ = {
@@ -288,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --strict | sed 's/warning:/error:/g'\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \"${SRCROOT}/swiftlint.yml\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -298,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3A0921231135C50041B1DB /* ViewController.swift in Sources */,
+				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
 				BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

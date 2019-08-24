@@ -16,6 +16,7 @@ inhibit_all_warnings!
 # Share pods
 
 pod 'SwiftLint', '0.34.0'
+pod 'Swinject', '2.6.2'
 
 target 'TransactionViewer' do
   # Pods for TransactionViewer

@@ -29,7 +29,9 @@ platform :ios do
 
   desc "Run lint"
   lane :lint do
-    swiftlint(strict: true)
+    swiftlint(strict: true, 
+              config_file: "swiftlint.yml"
+      )
   end
 
 end
