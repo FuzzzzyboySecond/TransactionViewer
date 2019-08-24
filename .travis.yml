@@ -3,6 +3,7 @@ osx_image: xcode10.3
 language: swift
 install:
     - bundle install
+    - bundle exec pod install --repo-update
 script:
     - bundle exec fastlane tests
     - bundle exec fastlane lint
