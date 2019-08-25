@@ -23,8 +23,8 @@ final class BaseAppCoordinator: AppCoordinator {
     }
 
     private func configureRootViewController() {
-        let viewController: ProductsViewController = ProductsViewController.instantiateFromStoryboard()!
-        viewController.viewModel = BaseProductsViewModel()
+        let viewController = TransactionsViewController()
+        viewController.viewModel = BaseTransactionsViewModel()
         rootViewController = UINavigationController(rootViewController: viewController)
     }
 
