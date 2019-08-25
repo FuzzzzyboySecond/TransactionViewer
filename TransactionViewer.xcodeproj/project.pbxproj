@@ -22,6 +22,9 @@
 		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
 		BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */; };
 		BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */; };
+		BAA56E442312E7630098CBB3 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E432312E7630098CBB3 /* Rate.swift */; };
+		BAA56E462312E7810098CBB3 /* RateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E452312E7810098CBB3 /* RateMapper.swift */; };
+		BAA56E482312E7F20098CBB3 /* BaseRateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */; };
 		BADA42E62312B0050041FF0D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42E52312B0050041FF0D /* ProductViewController.swift */; };
 		BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EA2312B8150041FF0D /* TransactionCell.swift */; };
 		BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */; };
@@ -75,6 +78,9 @@
 		BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppCoordinator.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA56E432312E7630098CBB3 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		BAA56E452312E7810098CBB3 /* RateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMapper.swift; sourceTree = "<group>"; };
+		BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRateMapper.swift; sourceTree = "<group>"; };
 		BADA42E52312B0050041FF0D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BADA42EA2312B8150041FF0D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellModel.swift; sourceTree = "<group>"; };
@@ -141,8 +147,8 @@
 		BA25D8A72312CEF100D0411C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BA25D8A82312CF0600D0411C /* DataLoader.swift */,
-				BA25D8AA2312CF4200D0411C /* BaseDataLoader.swift */,
+				BAA56E412312E72D0098CBB3 /* DataLoader */,
+				BAA56E422312E73C0098CBB3 /* RateMapper */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +259,24 @@
 			path = TransactionViewerTests;
 			sourceTree = "<group>";
 		};
+		BAA56E412312E72D0098CBB3 /* DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				BA25D8A82312CF0600D0411C /* DataLoader.swift */,
+				BA25D8AA2312CF4200D0411C /* BaseDataLoader.swift */,
+			);
+			path = DataLoader;
+			sourceTree = "<group>";
+		};
+		BAA56E422312E73C0098CBB3 /* RateMapper */ = {
+			isa = PBXGroup;
+			children = (
+				BAA56E452312E7810098CBB3 /* RateMapper.swift */,
+				BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */,
+			);
+			path = RateMapper;
+			sourceTree = "<group>";
+		};
 		BADA42E12312AFBA0041FF0D /* ProductScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +376,7 @@
 			children = (
 				BAE4B77523126A1900B666A8 /* Product.swift */,
 				BAE4B77723126A4800B666A8 /* Transaction.swift */,
+				BAA56E432312E7630098CBB3 /* Rate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -565,6 +590,7 @@
 				BAE4B78923127F9500B666A8 /* ProductListViewModel.swift in Sources */,
 				BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */,
 				BA25D8AB2312CF4200D0411C /* BaseDataLoader.swift in Sources */,
+				BAA56E442312E7630098CBB3 /* Rate.swift in Sources */,
 				BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */,
 				BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */,
 				BAE4B7662312590C00B666A8 /* UIViewController+Extensions.swift in Sources */,
@@ -572,7 +598,9 @@
 				BADA42F02312B88B0041FF0D /* BaseTransactionCellModel.swift in Sources */,
 				BAE4B77623126A1900B666A8 /* Product.swift in Sources */,
 				BAE4B769231263D500B666A8 /* ProductCell.swift in Sources */,
+				BAA56E482312E7F20098CBB3 /* BaseRateMapper.swift in Sources */,
 				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
+				BAA56E462312E7810098CBB3 /* RateMapper.swift in Sources */,
 				BADA42F52312BFBD0041FF0D /* BaseProductViewModel.swift in Sources */,
 				BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */,
 				BAE4B7722312680800B666A8 /* BaseProductCellModel.swift in Sources */,
