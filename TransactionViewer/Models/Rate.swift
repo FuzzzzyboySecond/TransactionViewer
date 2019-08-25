@@ -18,4 +18,11 @@ struct Rate: Decodable {
         case value = "rate"
     }
 
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        source = try container.decode(String.self, forKey: .source)
+        destination = try container.decode(String.self, forKey: .destination)
+        value = try container.decode(String.self, forKey: .value)
+    }
+
 }
