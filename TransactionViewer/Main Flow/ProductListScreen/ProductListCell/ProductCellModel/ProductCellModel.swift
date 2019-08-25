@@ -7,7 +7,7 @@
 //
 
 protocol ProductCellModelDelegate: class {
-    func productCellViewModelDidSelected(_ cellModel: ProductCellModel)
+    func productCellViewModelDidSelected(_ cellModel: ProductCellModel, with product: Product)
 }
 
 protocol ProductCellModel {

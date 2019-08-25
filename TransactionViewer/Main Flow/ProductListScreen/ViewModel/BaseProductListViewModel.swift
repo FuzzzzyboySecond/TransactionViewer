@@ -45,8 +45,8 @@ final class BaseProductListViewModel: ProductListViewModel {
 
 extension BaseProductListViewModel: ProductCellModelDelegate {
 
-    func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
-        delegate?.productListViewModel(self, didSelectProduct: Product(sku: cellModel.title, transactions: []))
+    func productCellViewModelDidSelected(_ cellModel: ProductCellModel, with product: Product) {
+        delegate?.productListViewModel(self, didSelectProduct: product)
     }
 
 }

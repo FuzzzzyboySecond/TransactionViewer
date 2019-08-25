@@ -12,4 +12,19 @@ enum Currency: String, Codable {
     case cad = "CAD"
     case aud = "AUD"
     case eur = "EUR"
+
+    var symbol: String {
+        switch self {
+        case .usd:
+            return "＄"
+        case .gbp:
+            return "￡"
+        case .cad:
+            return "C＄"
+        case .aud:
+            return "A＄"
+        case .eur:
+            return "€"
+        }
+    }
 }
