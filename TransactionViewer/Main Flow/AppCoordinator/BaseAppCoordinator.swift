@@ -24,6 +24,7 @@ final class BaseAppCoordinator: AppCoordinator {
 
     private func configureRootViewController() {
         let viewController = TransactionsViewController()
+        viewController.viewModel = BaseTransactionsViewModel()
         rootViewController = UINavigationController(rootViewController: viewController)
     }
 

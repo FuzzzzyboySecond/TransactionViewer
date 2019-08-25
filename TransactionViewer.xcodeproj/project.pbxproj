@@ -19,6 +19,8 @@
 		BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EA2312B8150041FF0D /* TransactionCell.swift */; };
 		BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */; };
 		BADA42F02312B88B0041FF0D /* BaseTransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EF2312B88B0041FF0D /* BaseTransactionCellModel.swift */; };
+		BADA42F32312BFA60041FF0D /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42F22312BFA60041FF0D /* TransactionsViewModel.swift */; };
+		BADA42F52312BFBD0041FF0D /* BaseTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42F42312BFBD0041FF0D /* BaseTransactionsViewModel.swift */; };
 		BAE4B7612312583B00B666A8 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7602312583B00B666A8 /* ProductsViewController.swift */; };
 		BAE4B7632312587400B666A8 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE4B7622312587400B666A8 /* ProductsViewController.storyboard */; };
 		BAE4B7662312590C00B666A8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7652312590C00B666A8 /* UIViewController+Extensions.swift */; };
@@ -63,6 +65,8 @@
 		BADA42EA2312B8150041FF0D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellModel.swift; sourceTree = "<group>"; };
 		BADA42EF2312B88B0041FF0D /* BaseTransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionCellModel.swift; sourceTree = "<group>"; };
+		BADA42F22312BFA60041FF0D /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		BADA42F42312BFBD0041FF0D /* BaseTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionsViewModel.swift; sourceTree = "<group>"; };
 		BAE4B7602312583B00B666A8 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		BAE4B7622312587400B666A8 /* ProductsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductsViewController.storyboard; sourceTree = "<group>"; };
 		BAE4B7652312590C00B666A8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			children = (
 				BADA42E72312B7A50041FF0D /* TransactionCell */,
 				BADA42E22312AFC80041FF0D /* ViewController */,
+				BADA42F12312BF900041FF0D /* TransactionsViewModel */,
 			);
 			path = TransactionsScreen;
 			sourceTree = "<group>";
@@ -230,6 +235,15 @@
 				BADA42EF2312B88B0041FF0D /* BaseTransactionCellModel.swift */,
 			);
 			path = CellModel;
+			sourceTree = "<group>";
+		};
+		BADA42F12312BF900041FF0D /* TransactionsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BADA42F22312BFA60041FF0D /* TransactionsViewModel.swift */,
+				BADA42F42312BFBD0041FF0D /* BaseTransactionsViewModel.swift */,
+			);
+			path = TransactionsViewModel;
 			sourceTree = "<group>";
 		};
 		BAE4B75F2312582700B666A8 /* ProductsScreen */ = {
@@ -487,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE4B76B231264CC00B666A8 /* UITableView+Extensions.swift in Sources */,
+				BADA42F32312BFA60041FF0D /* TransactionsViewModel.swift in Sources */,
 				BAE4B7612312583B00B666A8 /* ProductsViewController.swift in Sources */,
 				BAE4B77823126A4800B666A8 /* Transaction.swift in Sources */,
 				BAE4B78923127F9500B666A8 /* ProductsViewModel.swift in Sources */,
@@ -499,6 +514,7 @@
 				BAE4B77623126A1900B666A8 /* Product.swift in Sources */,
 				BAE4B769231263D500B666A8 /* ProductCell.swift in Sources */,
 				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
+				BADA42F52312BFBD0041FF0D /* BaseTransactionsViewModel.swift in Sources */,
 				BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */,
 				BAE4B7722312680800B666A8 /* BaseProductCellModel.swift in Sources */,
 				BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */,

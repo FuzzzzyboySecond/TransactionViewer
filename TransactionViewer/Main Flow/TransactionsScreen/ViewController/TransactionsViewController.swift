@@ -27,11 +27,7 @@ final class TransactionsViewController: UIViewController {
         return tableView
     }()
 
-    private let cellModels: [TransactionCellModel] = [
-        BaseTransactionCellModel(poundText: "＄30.20", originalText: "£23.25"),
-        BaseTransactionCellModel(poundText: "£19.70", originalText: "£19.70"),
-        BaseTransactionCellModel(poundText: "CA＄30.70", originalText: "£21.75")
-    ]
+    var viewModel: TransactionsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,12 +65,14 @@ final class TransactionsViewController: UIViewController {
 extension TransactionsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellModels.count
+        return viewModel?.cellModels.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(for: TransactionCell.self, indexPath: indexPath) else { fatalError("Can't dequeue TransactionCell") }
-        cell.configure(with: cellModels[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(for: TransactionCell.self, indexPath: indexPath),
+            let cellModel = viewModel?.cellModels[indexPath.row]
+            else { fatalError("Can't dequeue TransactionCell") }
+        cell.configure(with: cellModel)
         return cell
     }
 
