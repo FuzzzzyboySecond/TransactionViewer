@@ -7,5 +7,8 @@
 //
 
 protocol TransactionsViewModel {
+
+    var title: String { get }
     var cellModels: [TransactionCellModel] { get }
+
 }

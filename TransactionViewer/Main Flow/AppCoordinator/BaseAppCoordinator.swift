@@ -30,7 +30,7 @@ final class BaseAppCoordinator: AppCoordinator {
 
     private func routeToTransactions(with product: Product) {
         let viewController = TransactionsViewController()
-        viewController.viewModel = BaseTransactionsViewModel()
+        viewController.viewModel = BaseTransactionsViewModel(product: product)
         rootViewController?.pushViewController(viewController, animated: true)
     }
 

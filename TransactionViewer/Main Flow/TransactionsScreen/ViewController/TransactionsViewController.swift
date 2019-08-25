@@ -38,7 +38,7 @@ final class TransactionsViewController: UIViewController {
 
     private func configureNavigationItem() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Transactions for A0911"
+        navigationItem.title = viewModel?.title
     }
 
     private func configureSubviews() {

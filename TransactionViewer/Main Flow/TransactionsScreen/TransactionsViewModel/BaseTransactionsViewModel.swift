@@ -7,9 +7,16 @@
 //
 
 final class BaseTransactionsViewModel: TransactionsViewModel {
+
     let cellModels: [TransactionCellModel] = [
         BaseTransactionCellModel(poundText: "＄30.20", originalText: "£23.25"),
         BaseTransactionCellModel(poundText: "£19.70", originalText: "£19.70"),
         BaseTransactionCellModel(poundText: "CA＄30.70", originalText: "£21.75")
     ]
+
+    let title: String
+
+    init(product: Product) {
+        title = "Transactions for \(product.title)"
+    }
 }
