@@ -16,6 +16,7 @@ final class BaseRateMapper: RateMapper {
             let rates = try decoder.decode([Rate].self, from: data)
             return .success(rates)
         } catch {
+            print(error)
             return .failure(.decoding)
         }
     }

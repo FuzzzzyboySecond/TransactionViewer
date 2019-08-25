@@ -27,7 +27,7 @@ class RateMapperTests: XCTestCase {
 
     func test_mapRates_valid_data() {
         // given
-        let expected = [Rate(source: "USD", destination: "GBP", value: "0.77")]
+        let expected = [Rate(source: "USD", destination: "GBP", value: 0.77)]
         let dict = [["from": "USD", "to": "GBP", "rate": "0.77"]]
         guard let data = try? encoder.encode(dict) else {
             XCTAssert(false, "Can't encode dict to data")

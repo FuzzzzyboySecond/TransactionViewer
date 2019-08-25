@@ -10,7 +10,7 @@ struct Rate: Decodable, Equatable {
 
     let source: String
     let destination: String
-    let value: String
+    let value: Double
 
     enum CodingKeys: String, CodingKey {
         case source = "from"
@@ -18,7 +18,7 @@ struct Rate: Decodable, Equatable {
         case value = "rate"
     }
 
-    init(source: String, destination: String, value: String) {
+    init(source: String, destination: String, value: Double) {
         self.source = source
         self.destination = destination
         self.value = value
@@ -28,7 +28,13 @@ struct Rate: Decodable, Equatable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         source = try container.decode(String.self, forKey: .source)
         destination = try container.decode(String.self, forKey: .destination)
-        value = try container.decode(String.self, forKey: .value)
+        let valueString = try container.decode(String.self, forKey: .value)
+        guard let value = Double(valueString) else {
+            let context = DecodingError.Context(codingPath: [CodingKeys.value],
+                                                debugDescription: "Can't convert string to double")
+            throw DecodingError.dataCorrupted(context)
+        }
+        self.value = value
     }
 
 }
