@@ -28,7 +28,7 @@ final class BaseAppCoordinator: AppCoordinator {
         rootViewController = UINavigationController(rootViewController: viewController)
     }
 
-    private func routeToTransactions(with product: Product) {
+    private func routeToProductScreen(with product: Product) {
         let viewController = ProductViewController()
         viewController.viewModel = BaseProductViewModel(product: product)
         rootViewController?.pushViewController(viewController, animated: true)
@@ -39,7 +39,7 @@ final class BaseAppCoordinator: AppCoordinator {
 extension BaseAppCoordinator: ProductListViewModelDelegate {
 
     func productListViewModel(_ viewModel: ProductListViewModel, didSelectProduct product: Product) {
-        routeToTransactions(with: product)
+        routeToProductScreen(with: product)
     }
 
 }
