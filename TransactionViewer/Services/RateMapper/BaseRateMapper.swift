@@ -11,7 +11,14 @@ import Foundation
 final class BaseRateMapper: RateMapper {
 
     func mapRates(from data: Data) -> [Rate] {
-        return [Rate]()
+        let decoder = PropertyListDecoder()
+        do {
+            let rates = try decoder.decode([Rate].self, from: data)
+            return rates
+        } catch {
+            print(error)
+            return []
+        }
     }
 
 }

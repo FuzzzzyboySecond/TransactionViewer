@@ -6,5 +6,16 @@
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-struct Rate {
+struct Rate: Decodable {
+
+    let source: String
+    let destination: String
+    let value: String
+
+    enum CodingKeys: String, CodingKey {
+        case source = "from"
+        case destination = "to"
+        case value = "rate"
+    }
+
 }
