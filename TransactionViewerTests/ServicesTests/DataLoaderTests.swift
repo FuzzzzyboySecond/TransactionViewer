@@ -51,4 +51,21 @@ class DataLoaderTests: XCTestCase {
         XCTAssertEqual(expectedError, result.error)
     }
 
+    func test_invalide_data() {
+        // given
+        let bundle = Bundle(for: DataLoaderTests.self)
+        guard var url = bundle.url(forResource: "rates", withExtension: "plist") else {
+                XCTAssert(false, "Can't get url for rates.plist")
+                return
+        }
+        url = url.appendingPathExtension("a")
+        let expectedError: DataLoaderError = .invalideData
+
+        // when
+        let result = dataLoader.loadData(from: url)
+
+        // then
+        XCTAssertEqual(expectedError, result.error)
+    }
+
 }
