@@ -24,8 +24,22 @@ final class BaseAppCoordinator: AppCoordinator {
 
     private func configureRootViewController() {
         let viewController: ProductsViewController = ProductsViewController.instantiateFromStoryboard()!
-        viewController.viewModel = BaseProductsViewModel()
+        viewController.viewModel = BaseProductsViewModel(delegate: self)
         rootViewController = UINavigationController(rootViewController: viewController)
+    }
+
+    private func routeToTransactions(with product: Product) {
+        let viewController = TransactionsViewController()
+        viewController.viewModel = BaseTransactionsViewModel()
+        rootViewController?.pushViewController(viewController, animated: true)
+    }
+
+}
+
+extension BaseAppCoordinator: ProductsViewModelDelegate {
+
+    func productsViewModel(_ viewModel: ProductsViewModel, didSelectProduct product: Product) {
+        routeToTransactions(with: product)
     }
 
 }

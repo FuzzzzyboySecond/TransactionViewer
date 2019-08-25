@@ -10,7 +10,10 @@ final class BaseProductsViewModel: ProductsViewModel {
 
     var cellModels = [ProductCellModel]()
 
-    init() {
+    private weak var delegate: ProductsViewModelDelegate?
+
+    init(delegate: ProductsViewModelDelegate) {
+        self.delegate = delegate
         cellModels = [
             BaseProductCellModel(title: "A0911", transactionsCount: 424, delegate: self),
             BaseProductCellModel(title: "A8964", transactionsCount: 1, delegate: self),
@@ -25,7 +28,7 @@ final class BaseProductsViewModel: ProductsViewModel {
 extension BaseProductsViewModel: ProductCellModelDelegate {
 
     func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
-        print("\(cellModel.title) did selected")
+        delegate?.productsViewModel(self, didSelectProduct: Product(title: cellModel.title, transactions: []))
     }
 
 }
