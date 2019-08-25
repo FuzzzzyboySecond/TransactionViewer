@@ -6,7 +6,7 @@
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-struct Transaction: Decodable, Equatable {
+struct Transaction: Decodable, Hashable {
 
     var sku: String
     var currency: Currency

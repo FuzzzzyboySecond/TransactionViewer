@@ -20,13 +20,14 @@ class ProductCellModelTests: XCTestCase {
 
     func test_init_many_transactions() {
         // given
-        let title = "A"
-        let transactionsCount = 2
+        let product = Product(sku: "A", transactions: [
+            Transaction(sku: "a", currency: .usd, amount: 1),
+            Transaction(sku: "b", currency: .aud, amount: 1)])
         let expectedTitle = "A"
         let expectedDetails = "2 transactions"
 
         // when
-        let cellModel = BaseProductCellModel(title: title, transactionsCount: transactionsCount, delegate: self)
+        let cellModel = BaseProductCellModel(product: product, delegate: self)
 
         // then
         XCTAssertEqual(cellModel.title, expectedTitle)
@@ -35,13 +36,12 @@ class ProductCellModelTests: XCTestCase {
 
     func test_init_one_transactions() {
         // given
-        let title = "A"
-        let transactionsCount = 1
+        let product = Product(sku: "A", transactions: [Transaction(sku: "a", currency: .usd, amount: 1)])
         let expectedTitle = "A"
         let expectedDetails = "1 transaction"
 
         // when
-        let cellModel = BaseProductCellModel(title: title, transactionsCount: transactionsCount, delegate: self)
+        let cellModel = BaseProductCellModel(product: product, delegate: self)
 
         // then
         XCTAssertEqual(cellModel.title, expectedTitle)
@@ -50,8 +50,8 @@ class ProductCellModelTests: XCTestCase {
 
     func test_select() {
         // given
+        let product = Product(sku: "A", transactions: [Transaction(sku: "a", currency: .usd, amount: 1)])
         let expectedTitle = "A"
-        let transactionsCount = 2
 
         // then
         completion = { cellModel in
@@ -59,9 +59,8 @@ class ProductCellModelTests: XCTestCase {
         }
 
         // when
-        let cellModel = BaseProductCellModel(title: expectedTitle, transactionsCount: transactionsCount, delegate: self)
+        let cellModel = BaseProductCellModel(product: product, delegate: self)
         cellModel.select()
-
     }
 
 }

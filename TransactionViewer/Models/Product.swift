@@ -6,7 +6,13 @@
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-struct Product {
-    var title: String
-    var transactions: [Transaction]
+struct Product: Hashable {
+
+    let sku: String
+    var transactions: Set<Transaction>
+
+    mutating func add(_ transaction: Transaction) {
+        transactions.insert(transaction)
+    }
+
 }

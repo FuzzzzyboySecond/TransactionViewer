@@ -22,6 +22,7 @@
 		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
 		BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */; };
 		BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */; };
+		BA92EA89231313AD00E0DC29 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA92EA88231313AD00E0DC29 /* Dynamic.swift */; };
 		BAA56E442312E7630098CBB3 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E432312E7630098CBB3 /* Rate.swift */; };
 		BAA56E462312E7810098CBB3 /* RateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E452312E7810098CBB3 /* RateMapper.swift */; };
 		BAA56E482312E7F20098CBB3 /* BaseRateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */; };
@@ -87,6 +88,7 @@
 		BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppCoordinator.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA92EA88231313AD00E0DC29 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		BAA56E432312E7630098CBB3 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		BAA56E452312E7810098CBB3 /* RateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMapper.swift; sourceTree = "<group>"; };
 		BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRateMapper.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		BA3A091D231135C50041B1DB /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
+				BA92EA872313139E00E0DC29 /* Common */,
 				BA5BBF092311915100A48AB5 /* Configuration */,
 				BAE4B764231258FA00B666A8 /* Extensions */,
 				BA5BBF1A23119EFF00A48AB5 /* Main Flow */,
@@ -277,6 +280,14 @@
 				BA7FC0B523114CCA00EE5233 /* Info.plist */,
 			);
 			path = TransactionViewerTests;
+			sourceTree = "<group>";
+		};
+		BA92EA872313139E00E0DC29 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BA92EA88231313AD00E0DC29 /* Dynamic.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BAA56E412312E72D0098CBB3 /* DataLoader */ = {
@@ -683,6 +694,7 @@
 				BAC6818D2313007100C8C4B5 /* BaseTransactionMapper.swift in Sources */,
 				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
 				BAA56E462312E7810098CBB3 /* RateMapper.swift in Sources */,
+				BA92EA89231313AD00E0DC29 /* Dynamic.swift in Sources */,
 				BADA42F52312BFBD0041FF0D /* BaseProductViewModel.swift in Sources */,
 				BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */,
 				BAE4B7722312680800B666A8 /* BaseProductCellModel.swift in Sources */,

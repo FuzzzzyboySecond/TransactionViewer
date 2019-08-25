@@ -11,5 +11,9 @@ protocol ProductListViewModelDelegate: class {
 }
 
 protocol ProductListViewModel {
-    var cellModels: [ProductCellModel] { get }
+
+    var cellModels: Dynamic<[ProductCellModel]> { get }
+
+    func load()
+
 }

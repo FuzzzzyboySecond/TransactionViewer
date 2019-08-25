@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Swinject
 
 final class BaseAppCoordinator: AppCoordinator {
 
     var window: UIWindow?
 
+    private let container: Container
     private var rootViewController: UINavigationController?
 
-    init() {
+    init(container: Container) {
+        self.container = container
         configureRootViewController()
     }
 
@@ -24,7 +27,10 @@ final class BaseAppCoordinator: AppCoordinator {
 
     private func configureRootViewController() {
         let viewController: ProductListViewController = ProductListViewController.instantiateFromStoryboard()!
-        viewController.viewModel = BaseProductListViewModel(delegate: self)
+        viewController.viewModel = BaseProductListViewModel(
+            transactionService: container.resolve(TransactionService.self)!,
+            delegate: self
+        )
         rootViewController = UINavigationController(rootViewController: viewController)
     }
 

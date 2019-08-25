@@ -8,19 +8,37 @@
 
 final class BaseProductListViewModel: ProductListViewModel {
 
-    var cellModels = [ProductCellModel]()
+    var cellModels = Dynamic([ProductCellModel]())
 
+    private let transactionService: TransactionService
+    private var productsDict = [String: Product]()
     private weak var delegate: ProductListViewModelDelegate?
 
-    init(delegate: ProductListViewModelDelegate) {
+    init(transactionService: TransactionService, delegate: ProductListViewModelDelegate) {
+        self.transactionService = transactionService
         self.delegate = delegate
-        cellModels = [
-            BaseProductCellModel(title: "A0911", transactionsCount: 424, delegate: self),
-            BaseProductCellModel(title: "A8964", transactionsCount: 1, delegate: self),
-            BaseProductCellModel(title: "C7156", transactionsCount: 441, delegate: self),
-            BaseProductCellModel(title: "G7340", transactionsCount: 450, delegate: self),
-            BaseProductCellModel(title: "J4064", transactionsCount: 429, delegate: self)
-        ]
+    }
+
+    func load() {
+        transactionService.loadTransactions { [weak self] result in
+            switch result {
+            case .success(let transactions):
+                self?.handle(transactions)
+            case .failure(let error):
+                print("transactionService error: \(error)")
+            }
+        }
+    }
+
+    private func handle(_ transactions: [Transaction]) {
+        transactions.forEach { transaction in
+            guard productsDict[transaction.sku] != nil else {
+                productsDict[transaction.sku] = Product(sku: transaction.sku, transactions: [transaction])
+                return
+            }
+            productsDict[transaction.sku]?.add(transaction)
+        }
+        cellModels.value = productsDict.values.map { BaseProductCellModel.init(product: $0, delegate: self) }
     }
 
 }
@@ -28,7 +46,7 @@ final class BaseProductListViewModel: ProductListViewModel {
 extension BaseProductListViewModel: ProductCellModelDelegate {
 
     func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
-        delegate?.productListViewModel(self, didSelectProduct: Product(title: cellModel.title, transactions: []))
+        delegate?.productListViewModel(self, didSelectProduct: Product(sku: cellModel.title, transactions: []))
     }
 
 }
