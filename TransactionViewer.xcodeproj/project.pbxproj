@@ -26,6 +26,7 @@
 		BAA56E462312E7810098CBB3 /* RateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E452312E7810098CBB3 /* RateMapper.swift */; };
 		BAA56E482312E7F20098CBB3 /* BaseRateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */; };
 		BAA56E4A2312F4290098CBB3 /* RateMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E492312F4290098CBB3 /* RateMapperTests.swift */; };
+		BAA56E4C2312FB930098CBB3 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E4B2312FB930098CBB3 /* Currency.swift */; };
 		BADA42E62312B0050041FF0D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42E52312B0050041FF0D /* ProductViewController.swift */; };
 		BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EA2312B8150041FF0D /* TransactionCell.swift */; };
 		BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */; };
@@ -83,6 +84,7 @@
 		BAA56E452312E7810098CBB3 /* RateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMapper.swift; sourceTree = "<group>"; };
 		BAA56E472312E7F20098CBB3 /* BaseRateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRateMapper.swift; sourceTree = "<group>"; };
 		BAA56E492312F4290098CBB3 /* RateMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMapperTests.swift; sourceTree = "<group>"; };
+		BAA56E4B2312FB930098CBB3 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		BADA42E52312B0050041FF0D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BADA42EA2312B8150041FF0D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellModel.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				BAE4B77523126A1900B666A8 /* Product.swift */,
 				BAE4B77723126A4800B666A8 /* Transaction.swift */,
 				BAA56E432312E7630098CBB3 /* Rate.swift */,
+				BAA56E4B2312FB930098CBB3 /* Currency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				BAE4B78923127F9500B666A8 /* ProductListViewModel.swift in Sources */,
 				BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */,
 				BA25D8AB2312CF4200D0411C /* BaseDataLoader.swift in Sources */,
+				BAA56E4C2312FB930098CBB3 /* Currency.swift in Sources */,
 				BAA56E442312E7630098CBB3 /* Rate.swift in Sources */,
 				BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */,
 				BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */,
