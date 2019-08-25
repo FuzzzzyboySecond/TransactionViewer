@@ -12,6 +12,6 @@ enum RateMapperError: Error {
     case decoding
 }
 
-protocol RateMapper {
+protocol RateMapper: class {
     func mapRates(from data: Data) -> Result<[Rate], RateMapperError>
 }

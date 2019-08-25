@@ -17,6 +17,7 @@ final class AppContainer {
         registerDataLoader()
         registerRateMapper()
         registerTransactionsMapper()
+        registerRateService()
     }
 
     private func registerAppCoordinator() {
@@ -40,6 +41,13 @@ final class AppContainer {
     private func registerTransactionsMapper() {
         container.register(TransactionMapper.self) { _ in
             BaseTransactionMapper()
+        }.inObjectScope(.transient)
+    }
+
+    private func registerRateService() {
+        container.register(RateService.self) { resolver in
+            BaseRateService(dataLoader: resolver.resolve(DataLoader.self)!,
+                            mapper: resolver.resolve(RateMapper.self)!)
         }.inObjectScope(.transient)
     }
 
