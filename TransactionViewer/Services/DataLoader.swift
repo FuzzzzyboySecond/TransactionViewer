@@ -10,6 +10,7 @@ import Foundation
 
 enum DataLoaderError: Error {
     case notLocalURL
+    case invalideData
 }
 
 protocol DataLoader {
