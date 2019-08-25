@@ -15,6 +15,7 @@ final class AppContainer {
     init() {
         registerAppCoordinator()
         registerDataLoader()
+        registerRateMapper()
     }
 
     private func registerAppCoordinator() {
@@ -27,6 +28,12 @@ final class AppContainer {
         container.register(DataLoader.self) { _ in
             BaseDataLoader()
         }.inObjectScope(.container)
+    }
+
+    private func registerRateMapper() {
+        container.register(RateMapper.self) {_ in
+            BaseRateMapper()
+        }.inObjectScope(.transient)
     }
 
 }
