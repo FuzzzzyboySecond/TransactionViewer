@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         appCoordinator.start(in: window)
 
-        let dataLoader = BaseDataLoader()
+        let dataLoader = appContainer.resolve(DataLoader.self)!
         dataLoader.loadData(from: .transactions) {
             print("=== result: \($0)")
         }
