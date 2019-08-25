@@ -22,6 +22,7 @@ final class ProductListViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationItem()
         configureTableView()
+        bindViewModel()
         viewModel?.load()
     }
 
@@ -37,17 +38,25 @@ final class ProductListViewController: UIViewController {
         tableView.registerNib(ProductCell.self)
     }
 
+    private func bindViewModel() {
+        viewModel?.cellModels.bind { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+    }
+
 }
 
 extension ProductListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.cellModels.count ?? 0
+        return viewModel?.cellModels.value.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(for: ProductCell.self, indexPath: indexPath),
-            let cellModel = viewModel?.cellModels[indexPath.row]
+            let cellModel = viewModel?.cellModels.value[indexPath.row]
             else { fatalError("Can't dequeue ProductCell") }
 
         cell.configure(with: cellModel)

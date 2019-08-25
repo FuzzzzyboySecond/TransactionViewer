@@ -8,7 +8,7 @@
 
 final class BaseProductListViewModel: ProductListViewModel {
 
-    var cellModels = [ProductCellModel]()
+    var cellModels = Dynamic([ProductCellModel]())
 
     private let transactionService: TransactionService
     private var productsDict = [String: Product]()
@@ -38,7 +38,7 @@ final class BaseProductListViewModel: ProductListViewModel {
             }
             productsDict[transaction.sku]?.add(transaction)
         }
-        cellModels = productsDict.values.map { BaseProductCellModel.init(product: $0, delegate: self) }
+        cellModels.value = productsDict.values.map { BaseProductCellModel.init(product: $0, delegate: self) }
     }
 
 }
