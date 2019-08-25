@@ -23,8 +23,7 @@ final class BaseAppCoordinator: AppCoordinator {
     }
 
     private func configureRootViewController() {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let viewController = ProductsViewController.instantiateFromStoryboard()!
         rootViewController = UINavigationController(rootViewController: viewController)
     }
 
