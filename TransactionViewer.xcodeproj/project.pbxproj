@@ -26,6 +26,8 @@
 		BAE4B77823126A4800B666A8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B77723126A4800B666A8 /* Transaction.swift */; };
 		BAE4B7822312737500B666A8 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE4B7812312737500B666A8 /* ProductCell.xib */; };
 		BAE4B7852312798E00B666A8 /* ProductCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7842312798E00B666A8 /* ProductCellModelTests.swift */; };
+		BAE4B78923127F9500B666A8 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B78823127F9500B666A8 /* ProductsViewModel.swift */; };
+		BAE4B78B23127FC300B666A8 /* BaseProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B78A23127FC300B666A8 /* BaseProductsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BAE4B77723126A4800B666A8 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BAE4B7812312737500B666A8 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		BAE4B7842312798E00B666A8 /* ProductCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModelTests.swift; sourceTree = "<group>"; };
+		BAE4B78823127F9500B666A8 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		BAE4B78A23127FC300B666A8 /* BaseProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProductsViewModel.swift; sourceTree = "<group>"; };
 		BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F81E899600599C675914F734 /* Pods-TransactionViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewer.release.xcconfig"; path = "Target Support Files/Pods-TransactionViewer/Pods-TransactionViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE4B767231263C200B666A8 /* ProductCell */,
-				BAE4B7602312583B00B666A8 /* ProductsViewController.swift */,
-				BAE4B7622312587400B666A8 /* ProductsViewController.storyboard */,
+				BAE4B78623127F6800B666A8 /* ViewController */,
+				BAE4B78723127F7900B666A8 /* ViewModel */,
 			);
 			path = ProductsScreen;
 			sourceTree = "<group>";
@@ -247,6 +251,24 @@
 				BAE4B7842312798E00B666A8 /* ProductCellModelTests.swift */,
 			);
 			path = ProductsScreenTests;
+			sourceTree = "<group>";
+		};
+		BAE4B78623127F6800B666A8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BAE4B7622312587400B666A8 /* ProductsViewController.storyboard */,
+				BAE4B7602312583B00B666A8 /* ProductsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BAE4B78723127F7900B666A8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BAE4B78823127F9500B666A8 /* ProductsViewModel.swift */,
+				BAE4B78A23127FC300B666A8 /* BaseProductsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,9 +445,11 @@
 				BAE4B76B231264CC00B666A8 /* UITableView+Extensions.swift in Sources */,
 				BAE4B7612312583B00B666A8 /* ProductsViewController.swift in Sources */,
 				BAE4B77823126A4800B666A8 /* Transaction.swift in Sources */,
+				BAE4B78923127F9500B666A8 /* ProductsViewModel.swift in Sources */,
 				BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */,
 				BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */,
 				BAE4B7662312590C00B666A8 /* UIViewController+Extensions.swift in Sources */,
+				BAE4B78B23127FC300B666A8 /* BaseProductsViewModel.swift in Sources */,
 				BAE4B77623126A1900B666A8 /* Product.swift in Sources */,
 				BAE4B769231263D500B666A8 /* ProductCell.swift in Sources */,
 				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
