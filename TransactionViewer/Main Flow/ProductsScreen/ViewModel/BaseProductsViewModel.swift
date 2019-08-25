@@ -8,12 +8,24 @@
 
 final class BaseProductsViewModel: ProductsViewModel {
 
-    let cellModels: [ProductCellModel] = [
-        BaseProductCellModel(title: "A0911", transactionsCount: 424),
-        BaseProductCellModel(title: "A8964", transactionsCount: 1),
-        BaseProductCellModel(title: "C7156", transactionsCount: 441),
-        BaseProductCellModel(title: "G7340", transactionsCount: 450),
-        BaseProductCellModel(title: "J4064", transactionsCount: 429)
-    ]
+    var cellModels = [ProductCellModel]()
+
+    init() {
+        cellModels = [
+            BaseProductCellModel(title: "A0911", transactionsCount: 424, delegate: self),
+            BaseProductCellModel(title: "A8964", transactionsCount: 1, delegate: self),
+            BaseProductCellModel(title: "C7156", transactionsCount: 441, delegate: self),
+            BaseProductCellModel(title: "G7340", transactionsCount: 450, delegate: self),
+            BaseProductCellModel(title: "J4064", transactionsCount: 429, delegate: self)
+        ]
+    }
+
+}
+
+extension BaseProductsViewModel: ProductCellModelDelegate {
+
+    func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
+        print("\(cellModel.title) did selected")
+    }
 
 }
