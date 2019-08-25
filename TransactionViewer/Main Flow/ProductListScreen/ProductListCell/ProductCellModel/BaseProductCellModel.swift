@@ -11,10 +11,17 @@ final class BaseProductCellModel: ProductCellModel {
     var title: String
     var detailsText: String
 
-    init(title: String, transactionsCount: Int) {
+    private weak var delegate: ProductCellModelDelegate?
+
+    init(title: String, transactionsCount: Int, delegate: ProductCellModelDelegate) {
         self.title = title
         let transactionCountText = transactionsCount == 1 ? "transaction" : "transactions"
         detailsText = "\(transactionsCount) \(transactionCountText)"
+        self.delegate = delegate
+    }
+
+    func select() {
+        delegate?.productCellViewModelDidSelected(self)
     }
 
 }

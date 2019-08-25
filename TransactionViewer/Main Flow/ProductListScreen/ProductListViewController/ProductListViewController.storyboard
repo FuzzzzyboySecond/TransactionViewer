@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Products View Controller-->
+        <!--Product List View Controller-->
         <scene sceneID="OF9-eU-rUz">
             <objects>
-                <viewController id="qtQ-WI-wdp" customClass="ProductsViewController" customModule="TransactionViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qtQ-WI-wdp" customClass="ProductListViewController" customModule="TransactionViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yiA-FY-6eQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

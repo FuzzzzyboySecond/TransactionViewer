@@ -1,5 +1,5 @@
 //
-//  ProductsViewController.swift
+//  ProductListViewController.swift
 //  TransactionViewer
 //
 //  Created by Kirill Shakhansky on 25/08/2019.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-final class ProductsViewController: UIViewController {
+final class ProductListViewController: UIViewController {
 
     private enum Constants {
         static let navigationTitle = "Products"
     }
 
-    var viewModel: ProductsViewModel?
+    var viewModel: ProductListViewModel?
 
     @IBOutlet private weak var tableView: UITableView!
 
@@ -38,7 +38,7 @@ final class ProductsViewController: UIViewController {
 
 }
 
-extension ProductsViewController: UITableViewDataSource {
+extension ProductListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.cellModels.count ?? 0
