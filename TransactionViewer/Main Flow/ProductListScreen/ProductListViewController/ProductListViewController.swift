@@ -22,6 +22,7 @@ final class ProductListViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationItem()
         configureTableView()
+        viewModel?.load()
     }
 
     private func configureNavigationItem() {

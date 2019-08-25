@@ -11,5 +11,9 @@ protocol ProductListViewModelDelegate: class {
 }
 
 protocol ProductListViewModel {
+
     var cellModels: [ProductCellModel] { get }
+
+    func load()
+
 }

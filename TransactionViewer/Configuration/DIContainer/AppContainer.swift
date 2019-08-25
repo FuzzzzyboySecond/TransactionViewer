@@ -23,7 +23,7 @@ final class AppContainer {
 
     private func registerAppCoordinator() {
         container.register(AppCoordinator.self) { _ in
-            BaseAppCoordinator()
+            BaseAppCoordinator(container: self.container)
         }.inObjectScope(.container)
     }
 

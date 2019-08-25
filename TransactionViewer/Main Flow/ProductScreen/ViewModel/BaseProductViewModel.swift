@@ -17,6 +17,6 @@ final class BaseProductViewModel: ProductViewModel {
     let title: String
 
     init(product: Product) {
-        title = "Transactions for \(product.title)"
+        title = "Transactions for \(product.sku)"
     }
 }
