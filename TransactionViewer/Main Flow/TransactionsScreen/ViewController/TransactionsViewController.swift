@@ -18,6 +18,13 @@ final class TransactionsViewController: UIViewController {
         return label
     }()
 
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -32,11 +39,35 @@ final class TransactionsViewController: UIViewController {
 
     private func configureSubviews() {
         view.addSubview(totalLabel)
+        view.addSubview(tableView)
+
         NSLayoutConstraint.activate([
             totalLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             totalLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             totalLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16)
             ])
+
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: totalLabel.bottomAnchor, constant: 16),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+
+            ])
+    }
+
+}
+
+extension TransactionsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.backgroundColor = .blue
+        cell.textLabel?.text = "Label"
+        return cell
     }
 
 }
