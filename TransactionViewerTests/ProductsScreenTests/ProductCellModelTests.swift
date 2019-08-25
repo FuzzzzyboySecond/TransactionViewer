@@ -11,6 +11,13 @@ import XCTest
 
 class ProductCellModelTests: XCTestCase {
 
+    var completion: ((ProductCellModel) -> Void)?
+
+    override func tearDown() {
+        completion = nil
+        super.tearDown()
+    }
+
     func test_init_many_transactions() {
         // given
         let title = "A"
@@ -41,11 +48,28 @@ class ProductCellModelTests: XCTestCase {
         XCTAssertEqual(cellModel.detailsText, expectedDetails)
     }
 
+    func test_select() {
+        // given
+        let expectedTitle = "A"
+        let transactionsCount = 2
+
+        // then
+        completion = { cellModel in
+            XCTAssertEqual(expectedTitle, cellModel.title)
+        }
+
+        // when
+        let cellModel = BaseProductCellModel(title: expectedTitle, transactionsCount: transactionsCount, delegate: self)
+        cellModel.select()
+
+    }
+
 }
 
 extension ProductCellModelTests: ProductCellModelDelegate {
 
     func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
+        completion?(cellModel)
     }
 
 }
