@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1778DBA162FF3410AC2CF01F /* libPods-TransactionViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEAE483A9B2EA56001CB8E2 /* libPods-TransactionViewer.a */; };
 		8F2EA8342F34BCA53DA18925 /* libPods-TransactionViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF22486B50C050559F930D1 /* libPods-TransactionViewerTests.a */; };
+		BA25D8A92312CF0600D0411C /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25D8A82312CF0600D0411C /* DataLoader.swift */; };
+		BA25D8AB2312CF4200D0411C /* BaseDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25D8AA2312CF4200D0411C /* BaseDataLoader.swift */; };
+		BA25D8AE2312CFB600D0411C /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA25D8AD2312CFB600D0411C /* rates.plist */; };
 		BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A091E231135C50041B1DB /* AppDelegate.swift */; };
 		BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0925231135C60041B1DB /* Assets.xcassets */; };
 		BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0927231135C60041B1DB /* LaunchScreen.storyboard */; };
@@ -51,6 +54,9 @@
 		330B7D7D6260A5208F788E7B /* Pods-TransactionViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewer.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewer/Pods-TransactionViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		55DC0298BC52A96B930B80C8 /* Pods-TransactionViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.release.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEAE483A9B2EA56001CB8E2 /* libPods-TransactionViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA25D8A82312CF0600D0411C /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		BA25D8AA2312CF4200D0411C /* BaseDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataLoader.swift; sourceTree = "<group>"; };
+		BA25D8AD2312CFB600D0411C /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
 		BA3A091B231135C50041B1DB /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A091E231135C50041B1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3A0925231135C60041B1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +130,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BA25D8A72312CEF100D0411C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA25D8A82312CF0600D0411C /* DataLoader.swift */,
+				BA25D8AA2312CF4200D0411C /* BaseDataLoader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BA25D8AC2312CF7700D0411C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA25D8AD2312CFB600D0411C /* rates.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BA3A0912231135C50041B1DB = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +170,12 @@
 		BA3A091D231135C50041B1DB /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BAE4B77423126A0D00B666A8 /* Models */,
+				BA25D8AC2312CF7700D0411C /* Resources */,
 				BA5BBF092311915100A48AB5 /* Configuration */,
 				BAE4B764231258FA00B666A8 /* Extensions */,
 				BA5BBF1A23119EFF00A48AB5 /* Main Flow */,
+				BAE4B77423126A0D00B666A8 /* Models */,
+				BA25D8A72312CEF100D0411C /* Services */,
 				BAE4B7732312685A00B666A8 /* Supporting Files */,
 			);
 			path = TransactionViewer;
@@ -415,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */,
+				BA25D8AE2312CFB600D0411C /* rates.plist in Resources */,
 				BAE4B7822312737500B666A8 /* ProductCell.xib in Resources */,
 				BAE4B7632312587400B666A8 /* ProductListViewController.storyboard in Resources */,
 				BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */,
@@ -502,10 +528,12 @@
 			files = (
 				BAE4B76B231264CC00B666A8 /* UITableView+Extensions.swift in Sources */,
 				BADA42F32312BFA60041FF0D /* ProductViewModel.swift in Sources */,
+				BA25D8A92312CF0600D0411C /* DataLoader.swift in Sources */,
 				BAE4B7612312583B00B666A8 /* ProductListViewController.swift in Sources */,
 				BAE4B77823126A4800B666A8 /* Transaction.swift in Sources */,
 				BAE4B78923127F9500B666A8 /* ProductListViewModel.swift in Sources */,
 				BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */,
+				BA25D8AB2312CF4200D0411C /* BaseDataLoader.swift in Sources */,
 				BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */,
 				BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */,
 				BAE4B7662312590C00B666A8 /* UIViewController+Extensions.swift in Sources */,
