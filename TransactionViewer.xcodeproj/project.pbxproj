@@ -15,12 +15,12 @@
 		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
 		BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */; };
 		BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */; };
-		BADA42E62312B0050041FF0D /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42E52312B0050041FF0D /* TransactionsViewController.swift */; };
+		BADA42E62312B0050041FF0D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42E52312B0050041FF0D /* ProductViewController.swift */; };
 		BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EA2312B8150041FF0D /* TransactionCell.swift */; };
 		BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */; };
 		BADA42F02312B88B0041FF0D /* BaseTransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EF2312B88B0041FF0D /* BaseTransactionCellModel.swift */; };
-		BADA42F32312BFA60041FF0D /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42F22312BFA60041FF0D /* TransactionsViewModel.swift */; };
-		BADA42F52312BFBD0041FF0D /* BaseTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42F42312BFBD0041FF0D /* BaseTransactionsViewModel.swift */; };
+		BADA42F32312BFA60041FF0D /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42F22312BFA60041FF0D /* ProductViewModel.swift */; };
+		BADA42F52312BFBD0041FF0D /* BaseProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42F42312BFBD0041FF0D /* BaseProductViewModel.swift */; };
 		BAE4B7612312583B00B666A8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7602312583B00B666A8 /* ProductListViewController.swift */; };
 		BAE4B7632312587400B666A8 /* ProductListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE4B7622312587400B666A8 /* ProductListViewController.storyboard */; };
 		BAE4B7662312590C00B666A8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7652312590C00B666A8 /* UIViewController+Extensions.swift */; };
@@ -61,12 +61,12 @@
 		BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppCoordinator.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BADA42E52312B0050041FF0D /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		BADA42E52312B0050041FF0D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BADA42EA2312B8150041FF0D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellModel.swift; sourceTree = "<group>"; };
 		BADA42EF2312B88B0041FF0D /* BaseTransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionCellModel.swift; sourceTree = "<group>"; };
-		BADA42F22312BFA60041FF0D /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
-		BADA42F42312BFBD0041FF0D /* BaseTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionsViewModel.swift; sourceTree = "<group>"; };
+		BADA42F22312BFA60041FF0D /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		BADA42F42312BFBD0041FF0D /* BaseProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProductViewModel.swift; sourceTree = "<group>"; };
 		BAE4B7602312583B00B666A8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		BAE4B7622312587400B666A8 /* ProductListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductListViewController.storyboard; sourceTree = "<group>"; };
 		BAE4B7652312590C00B666A8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		BA5BBF1A23119EFF00A48AB5 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
-				BADA42E12312AFBA0041FF0D /* TransactionsScreen */,
+				BADA42E12312AFBA0041FF0D /* ProductScreen */,
 				BAE4B75F2312582700B666A8 /* ProductListScreen */,
 				BA5BBF1B23119F1500A48AB5 /* AppCoordinator */,
 			);
@@ -201,20 +201,20 @@
 			path = TransactionViewerTests;
 			sourceTree = "<group>";
 		};
-		BADA42E12312AFBA0041FF0D /* TransactionsScreen */ = {
+		BADA42E12312AFBA0041FF0D /* ProductScreen */ = {
 			isa = PBXGroup;
 			children = (
 				BADA42E72312B7A50041FF0D /* TransactionCell */,
 				BADA42E22312AFC80041FF0D /* ViewController */,
-				BADA42F12312BF900041FF0D /* TransactionsViewModel */,
+				BADA42F12312BF900041FF0D /* ViewModel */,
 			);
-			path = TransactionsScreen;
+			path = ProductScreen;
 			sourceTree = "<group>";
 		};
 		BADA42E22312AFC80041FF0D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BADA42E52312B0050041FF0D /* TransactionsViewController.swift */,
+				BADA42E52312B0050041FF0D /* ProductViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,13 +237,13 @@
 			path = CellModel;
 			sourceTree = "<group>";
 		};
-		BADA42F12312BF900041FF0D /* TransactionsViewModel */ = {
+		BADA42F12312BF900041FF0D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BADA42F22312BFA60041FF0D /* TransactionsViewModel.swift */,
-				BADA42F42312BFBD0041FF0D /* BaseTransactionsViewModel.swift */,
+				BADA42F22312BFA60041FF0D /* ProductViewModel.swift */,
+				BADA42F42312BFBD0041FF0D /* BaseProductViewModel.swift */,
 			);
-			path = TransactionsViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BAE4B75F2312582700B666A8 /* ProductListScreen */ = {
@@ -501,7 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE4B76B231264CC00B666A8 /* UITableView+Extensions.swift in Sources */,
-				BADA42F32312BFA60041FF0D /* TransactionsViewModel.swift in Sources */,
+				BADA42F32312BFA60041FF0D /* ProductViewModel.swift in Sources */,
 				BAE4B7612312583B00B666A8 /* ProductListViewController.swift in Sources */,
 				BAE4B77823126A4800B666A8 /* Transaction.swift in Sources */,
 				BAE4B78923127F9500B666A8 /* ProductListViewModel.swift in Sources */,
@@ -514,12 +514,12 @@
 				BAE4B77623126A1900B666A8 /* Product.swift in Sources */,
 				BAE4B769231263D500B666A8 /* ProductCell.swift in Sources */,
 				BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */,
-				BADA42F52312BFBD0041FF0D /* BaseTransactionsViewModel.swift in Sources */,
+				BADA42F52312BFBD0041FF0D /* BaseProductViewModel.swift in Sources */,
 				BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */,
 				BAE4B7722312680800B666A8 /* BaseProductCellModel.swift in Sources */,
 				BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */,
 				BAE4B770231267CE00B666A8 /* ProductCellModel.swift in Sources */,
-				BADA42E62312B0050041FF0D /* TransactionsViewController.swift in Sources */,
+				BADA42E62312B0050041FF0D /* ProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

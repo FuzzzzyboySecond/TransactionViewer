@@ -1,12 +1,12 @@
 //
-//  BaseTransactionsViewModel.swift
+//  BaseProductViewModel.swift
 //  TransactionViewer
 //
 //  Created by Kirill Shakhansky on 25/08/2019.
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-final class BaseTransactionsViewModel: TransactionsViewModel {
+final class BaseProductViewModel: ProductViewModel {
 
     let cellModels: [TransactionCellModel] = [
         BaseTransactionCellModel(poundText: "＄30.20", originalText: "£23.25"),

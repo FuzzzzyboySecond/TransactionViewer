@@ -1,5 +1,5 @@
 //
-//  TransactionsViewController.swift
+//  ProductViewController.swift
 //  TransactionViewer
 //
 //  Created by Kirill Shakhansky on 25/08/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TransactionsViewController: UIViewController {
+final class ProductViewController: UIViewController {
 
     private lazy var totalLabel: UILabel = {
         let label = UILabel()
@@ -27,7 +27,7 @@ final class TransactionsViewController: UIViewController {
         return tableView
     }()
 
-    var viewModel: TransactionsViewModel?
+    var viewModel: ProductViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ final class TransactionsViewController: UIViewController {
 
 }
 
-extension TransactionsViewController: UITableViewDataSource {
+extension ProductViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.cellModels.count ?? 0

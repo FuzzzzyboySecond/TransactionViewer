@@ -29,8 +29,8 @@ final class BaseAppCoordinator: AppCoordinator {
     }
 
     private func routeToTransactions(with product: Product) {
-        let viewController = TransactionsViewController()
-        viewController.viewModel = BaseTransactionsViewModel(product: product)
+        let viewController = ProductViewController()
+        viewController.viewModel = BaseProductViewModel(product: product)
         rootViewController?.pushViewController(viewController, animated: true)
     }
 
