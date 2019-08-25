@@ -19,7 +19,7 @@ class ProductCellModelTests: XCTestCase {
         let expectedDetails = "2 transactions"
 
         // when
-        let cellModel = BaseProductCellModel(title: title, transactionsCount: transactionsCount)
+        let cellModel = BaseProductCellModel(title: title, transactionsCount: transactionsCount, delegate: self)
 
         // then
         XCTAssertEqual(cellModel.title, expectedTitle)
@@ -34,11 +34,18 @@ class ProductCellModelTests: XCTestCase {
         let expectedDetails = "1 transaction"
 
         // when
-        let cellModel = BaseProductCellModel(title: title, transactionsCount: transactionsCount)
+        let cellModel = BaseProductCellModel(title: title, transactionsCount: transactionsCount, delegate: self)
 
         // then
         XCTAssertEqual(cellModel.title, expectedTitle)
         XCTAssertEqual(cellModel.detailsText, expectedDetails)
+    }
+
+}
+
+extension ProductCellModelTests: ProductCellModelDelegate {
+
+    func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
     }
 
 }
