@@ -13,9 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let appContainer = AppContainer().container
-    lazy var rateService: RateService = {
-        return appContainer.resolve(RateService.self)!
-    }()
 
     lazy var appCoordinator: AppCoordinator = {
         return appContainer.resolve(AppCoordinator.self)!
@@ -26,10 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         appCoordinator.start(in: window)
-
-        rateService.loadRates { (result) in
-            print(result)
-        }
 
         return true
     }

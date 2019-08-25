@@ -12,6 +12,6 @@ enum TransactionMapperError: Error {
     case decoding
 }
 
-protocol TransactionMapper {
+protocol TransactionMapper: class {
     func mapTransactions(from data: Data) -> Result<[Transaction], TransactionMapperError>
 }

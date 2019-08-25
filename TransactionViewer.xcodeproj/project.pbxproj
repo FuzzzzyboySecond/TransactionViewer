@@ -29,6 +29,8 @@
 		BAA56E4C2312FB930098CBB3 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E4B2312FB930098CBB3 /* Currency.swift */; };
 		BABE41C6231305CA00C64969 /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE41C5231305CA00C64969 /* RateService.swift */; };
 		BABE41C82313060900C64969 /* BaseRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE41C72313060900C64969 /* BaseRateService.swift */; };
+		BABE41CB2313097A00C64969 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE41CA2313097A00C64969 /* TransactionService.swift */; };
+		BABE41CD231309D600C64969 /* BaseTransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE41CC231309D600C64969 /* BaseTransactionService.swift */; };
 		BAC6818B2313002900C8C4B5 /* TransactionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6818A2313002900C8C4B5 /* TransactionMapper.swift */; };
 		BAC6818D2313007100C8C4B5 /* BaseTransactionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6818C2313007100C8C4B5 /* BaseTransactionMapper.swift */; };
 		BAC681922313011C00C8C4B5 /* TransactionMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC681912313011C00C8C4B5 /* TransactionMapperTests.swift */; };
@@ -92,6 +94,8 @@
 		BAA56E4B2312FB930098CBB3 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		BABE41C5231305CA00C64969 /* RateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateService.swift; sourceTree = "<group>"; };
 		BABE41C72313060900C64969 /* BaseRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRateService.swift; sourceTree = "<group>"; };
+		BABE41CA2313097A00C64969 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		BABE41CC231309D600C64969 /* BaseTransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionService.swift; sourceTree = "<group>"; };
 		BAC6818A2313002900C8C4B5 /* TransactionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapper.swift; sourceTree = "<group>"; };
 		BAC6818C2313007100C8C4B5 /* BaseTransactionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionMapper.swift; sourceTree = "<group>"; };
 		BAC681912313011C00C8C4B5 /* TransactionMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapperTests.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 		BABE41C3231305B100C64969 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BABE41C92313096900C64969 /* TransactionService */,
 				BABE41C4231305B900C64969 /* RateService */,
 			);
 			path = Services;
@@ -308,6 +313,15 @@
 				BABE41C72313060900C64969 /* BaseRateService.swift */,
 			);
 			path = RateService;
+			sourceTree = "<group>";
+		};
+		BABE41C92313096900C64969 /* TransactionService */ = {
+			isa = PBXGroup;
+			children = (
+				BABE41CA2313097A00C64969 /* TransactionService.swift */,
+				BABE41CC231309D600C64969 /* BaseTransactionService.swift */,
+			);
+			path = TransactionService;
 			sourceTree = "<group>";
 		};
 		BAC681882313000400C8C4B5 /* Mappers */ = {
@@ -651,7 +665,9 @@
 				BAE4B77823126A4800B666A8 /* Transaction.swift in Sources */,
 				BAE4B78923127F9500B666A8 /* ProductListViewModel.swift in Sources */,
 				BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */,
+				BABE41CD231309D600C64969 /* BaseTransactionService.swift in Sources */,
 				BA25D8AB2312CF4200D0411C /* BaseDataLoader.swift in Sources */,
+				BABE41CB2313097A00C64969 /* TransactionService.swift in Sources */,
 				BABE41C82313060900C64969 /* BaseRateService.swift in Sources */,
 				BAA56E4C2312FB930098CBB3 /* Currency.swift in Sources */,
 				BAA56E442312E7630098CBB3 /* Rate.swift in Sources */,
