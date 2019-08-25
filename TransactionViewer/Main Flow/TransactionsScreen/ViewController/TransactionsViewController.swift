@@ -13,7 +13,7 @@ final class TransactionsViewController: UIViewController {
     private lazy var totalLabel: UILabel = {
         let label = UILabel()
         label.text = "Total £9,609.17"
-        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -21,9 +21,17 @@ final class TransactionsViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(TransactionCell.self)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+
+    private let cellModels: [TransactionCellModel] = [
+        BaseTransactionCellModel(poundText: "＄30.20", originalText: "£23.25"),
+        BaseTransactionCellModel(poundText: "£19.70", originalText: "£19.70"),
+        BaseTransactionCellModel(poundText: "CA＄30.70", originalText: "£21.75")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,14 +67,14 @@ final class TransactionsViewController: UIViewController {
 }
 
 extension TransactionsViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cellModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .blue
-        cell.textLabel?.text = "Label"
+        guard let cell = tableView.dequeueReusableCell(for: TransactionCell.self, indexPath: indexPath) else { fatalError("Can't dequeue TransactionCell") }
+        cell.configure(with: cellModels[indexPath.row])
         return cell
     }
 
