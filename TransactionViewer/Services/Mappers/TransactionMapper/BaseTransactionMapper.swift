@@ -12,7 +12,7 @@ final class BaseTransactionMapper: TransactionMapper {
 
     let decoder = PropertyListDecoder()
 
-    func mapTransaction(from data: Data) -> Result<[Transaction], TransactionMapperError> {
+    func mapTransactions(from data: Data) -> Result<[Transaction], TransactionMapperError> {
         do {
             let transactions = try decoder.decode([Transaction].self, from: data)
             return .success(transactions)

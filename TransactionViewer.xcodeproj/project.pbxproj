@@ -29,6 +29,7 @@
 		BAA56E4C2312FB930098CBB3 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA56E4B2312FB930098CBB3 /* Currency.swift */; };
 		BAC6818B2313002900C8C4B5 /* TransactionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6818A2313002900C8C4B5 /* TransactionMapper.swift */; };
 		BAC6818D2313007100C8C4B5 /* BaseTransactionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6818C2313007100C8C4B5 /* BaseTransactionMapper.swift */; };
+		BAC681922313011C00C8C4B5 /* TransactionMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC681912313011C00C8C4B5 /* TransactionMapperTests.swift */; };
 		BADA42E62312B0050041FF0D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42E52312B0050041FF0D /* ProductViewController.swift */; };
 		BADA42EB2312B8150041FF0D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42EA2312B8150041FF0D /* TransactionCell.swift */; };
 		BADA42EE2312B87C0041FF0D /* TransactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */; };
@@ -89,6 +90,7 @@
 		BAA56E4B2312FB930098CBB3 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		BAC6818A2313002900C8C4B5 /* TransactionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapper.swift; sourceTree = "<group>"; };
 		BAC6818C2313007100C8C4B5 /* BaseTransactionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTransactionMapper.swift; sourceTree = "<group>"; };
+		BAC681912313011C00C8C4B5 /* TransactionMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapperTests.swift; sourceTree = "<group>"; };
 		BADA42E52312B0050041FF0D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BADA42EA2312B8150041FF0D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BADA42ED2312B87C0041FF0D /* TransactionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellModel.swift; sourceTree = "<group>"; };
@@ -173,8 +175,8 @@
 		BA25D8AF2312CFE700D0411C /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
+				BAC6818E231300EB00C8C4B5 /* MapperTests */,
 				BA25D8B02312CFFF00D0411C /* DataLoaderTests.swift */,
-				BAA56E492312F4290098CBB3 /* RateMapperTests.swift */,
 			);
 			path = ServicesTests;
 			sourceTree = "<group>";
@@ -302,6 +304,15 @@
 				BAC6818C2313007100C8C4B5 /* BaseTransactionMapper.swift */,
 			);
 			path = TransactionMapper;
+			sourceTree = "<group>";
+		};
+		BAC6818E231300EB00C8C4B5 /* MapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAA56E492312F4290098CBB3 /* RateMapperTests.swift */,
+				BAC681912313011C00C8C4B5 /* TransactionMapperTests.swift */,
+			);
+			path = MapperTests;
 			sourceTree = "<group>";
 		};
 		BADA42E12312AFBA0041FF0D /* ProductScreen */ = {
@@ -646,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA25D8B12312CFFF00D0411C /* DataLoaderTests.swift in Sources */,
+				BAC681922313011C00C8C4B5 /* TransactionMapperTests.swift in Sources */,
 				BAE4B7852312798E00B666A8 /* ProductCellModelTests.swift in Sources */,
 				BAA56E4A2312F4290098CBB3 /* RateMapperTests.swift in Sources */,
 			);

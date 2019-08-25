@@ -13,5 +13,5 @@ enum TransactionMapperError: Error {
 }
 
 protocol TransactionMapper {
-    func mapTransaction(from data: Data) -> Result<[Transaction], TransactionMapperError>
+    func mapTransactions(from data: Data) -> Result<[Transaction], TransactionMapperError>
 }
