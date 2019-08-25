@@ -10,7 +10,8 @@ import Foundation
 
 final class BaseDataLoader: DataLoader {
 
-    func loadData(from url: URL) -> Result<Data, Error> {
+    func loadData(from url: URL) -> Result<Data, DataLoaderError> {
+        guard url.isFileURL else { return .failure(.notLocalURL) }
         return .success(Data())
     }
 

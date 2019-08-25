@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum DataLoaderError: Error {
+    case notLocalURL
+}
+
 protocol DataLoader {
-    func loadData(from url: URL) -> Result<Data, Error>
+    func loadData(from url: URL) -> Result<Data, DataLoaderError>
 }
