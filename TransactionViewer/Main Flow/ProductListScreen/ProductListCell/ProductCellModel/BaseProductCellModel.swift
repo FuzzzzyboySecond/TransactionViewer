@@ -13,10 +13,10 @@ final class BaseProductCellModel: ProductCellModel {
 
     private weak var delegate: ProductCellModelDelegate?
 
-    init(title: String, transactionsCount: Int, delegate: ProductCellModelDelegate) {
-        self.title = title
-        let transactionCountText = transactionsCount == 1 ? "transaction" : "transactions"
-        detailsText = "\(transactionsCount) \(transactionCountText)"
+    init(product: Product, delegate: ProductCellModelDelegate) {
+        title = product.sku
+        let transactionCountText = product.transactions.count == 1 ? "transaction" : "transactions"
+        detailsText = "\(product.transactions.count) \(transactionCountText)"
         self.delegate = delegate
     }
 

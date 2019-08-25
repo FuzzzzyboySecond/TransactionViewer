@@ -20,7 +20,6 @@ final class BaseProductListViewModel: ProductListViewModel {
     }
 
     func load() {
-        print("=== load")
         transactionService.loadTransactions { [weak self] result in
             switch result {
             case .success(let transactions):
@@ -39,6 +38,10 @@ final class BaseProductListViewModel: ProductListViewModel {
             }
             productsDict[transaction.sku]?.add(transaction)
         }
+    }
+
+    private func updateCellModels() {
+
     }
 
 }
