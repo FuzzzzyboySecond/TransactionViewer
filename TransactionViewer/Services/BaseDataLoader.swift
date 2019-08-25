@@ -12,7 +12,7 @@ final class BaseDataLoader: DataLoader {
 
     func loadData(from url: URL, completion: @escaping (Result<Data, DataLoaderError>) -> Void) {
         // imitation async
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.global().async {
             guard url.isFileURL else { return completion(.failure(.notLocalURL)) }
             do {
                 let data = try Data(contentsOf: url)

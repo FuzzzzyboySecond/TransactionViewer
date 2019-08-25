@@ -15,6 +15,7 @@
 		BA25D8B12312CFFF00D0411C /* DataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25D8B02312CFFF00D0411C /* DataLoaderTests.swift */; };
 		BA25D8B42312D08300D0411C /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA25D8B32312D08300D0411C /* rates.plist */; };
 		BA25D8B82312D4E000D0411C /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25D8B72312D4E000D0411C /* Result+Extensions.swift */; };
+		BA25D8BB2312E3DE00D0411C /* transactions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA25D8B92312E3B000D0411C /* transactions.plist */; };
 		BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A091E231135C50041B1DB /* AppDelegate.swift */; };
 		BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0925231135C60041B1DB /* Assets.xcassets */; };
 		BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0927231135C60041B1DB /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		BA25D8B02312CFFF00D0411C /* DataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderTests.swift; sourceTree = "<group>"; };
 		BA25D8B32312D08300D0411C /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
 		BA25D8B72312D4E000D0411C /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		BA25D8B92312E3B000D0411C /* transactions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions.plist; sourceTree = "<group>"; };
 		BA3A091B231135C50041B1DB /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A091E231135C50041B1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3A0925231135C60041B1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BA25D8AD2312CFB600D0411C /* rates.plist */,
+				BA25D8B92312E3B000D0411C /* transactions.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,11 +195,11 @@
 		BA3A091D231135C50041B1DB /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BA25D8AC2312CF7700D0411C /* Resources */,
 				BA5BBF092311915100A48AB5 /* Configuration */,
 				BAE4B764231258FA00B666A8 /* Extensions */,
 				BA5BBF1A23119EFF00A48AB5 /* Main Flow */,
 				BAE4B77423126A0D00B666A8 /* Models */,
+				BA25D8AC2312CF7700D0411C /* Resources */,
 				BA25D8A72312CEF100D0411C /* Services */,
 				BAE4B7732312685A00B666A8 /* Supporting Files */,
 			);
@@ -469,6 +472,7 @@
 				BAE4B7822312737500B666A8 /* ProductCell.xib in Resources */,
 				BAE4B7632312587400B666A8 /* ProductListViewController.storyboard in Resources */,
 				BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */,
+				BA25D8BB2312E3DE00D0411C /* transactions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

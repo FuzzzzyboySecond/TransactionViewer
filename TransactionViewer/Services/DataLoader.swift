@@ -13,6 +13,27 @@ enum DataLoaderError: Error {
     case invalideData
 }
 
+enum DataLoaderEndpoint: String {
+    case rates
+    case transactions
+
+    var url: URL? {
+        let bundle = Bundle.main
+        return bundle.url(forResource: rawValue, withExtension: "plist")
+    }
+}
+
 protocol DataLoader {
+    func loadData(from endpoint: DataLoaderEndpoint, completion: @escaping (Result<Data, DataLoaderError>) -> Void)
     func loadData(from url: URL, completion: @escaping (Result<Data, DataLoaderError>) -> Void)
+}
+
+extension DataLoader {
+    func loadData(from endpoint: DataLoaderEndpoint, completion: @escaping (Result<Data, DataLoaderError>) -> Void) {
+        guard let url = endpoint.url else {
+            completion(.failure(.notLocalURL))
+            return
+        }
+        loadData(from: url, completion: completion)
+    }
 }

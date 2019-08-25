@@ -24,10 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         appCoordinator.start(in: window)
 
-        let bundle = Bundle.main
-        let url = bundle.url(forResource: "rates", withExtension: "plist")!
         let dataLoader = BaseDataLoader()
-        dataLoader.loadData(from: url) {
+        dataLoader.loadData(from: .transactions) {
             print("=== result: \($0)")
         }
 
