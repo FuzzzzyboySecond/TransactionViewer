@@ -14,12 +14,19 @@ final class AppContainer {
 
     init() {
         registerAppCoordinator()
+        registerDataLoader()
     }
 
     private func registerAppCoordinator() {
         container.register(AppCoordinator.self) { _ in
             BaseAppCoordinator()
-        }
+        }.inObjectScope(.container)
+    }
+
+    private func registerDataLoader() {
+        container.register(DataLoader.self) { _ in
+            BaseDataLoader()
+        }.inObjectScope(.container)
     }
 
 }
