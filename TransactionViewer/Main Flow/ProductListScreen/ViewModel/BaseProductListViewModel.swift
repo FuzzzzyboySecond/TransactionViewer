@@ -38,10 +38,7 @@ final class BaseProductListViewModel: ProductListViewModel {
             }
             productsDict[transaction.sku]?.add(transaction)
         }
-    }
-
-    private func updateCellModels() {
-
+        cellModels = productsDict.values.map { BaseProductCellModel.init(product: $0, delegate: self) }
     }
 
 }
