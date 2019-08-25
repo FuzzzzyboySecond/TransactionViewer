@@ -10,14 +10,14 @@ import UIKit
 
 final class TransactionCell: UITableViewCell {
 
-    private lazy var convertedPriceLabel: UILabel = {
+    private lazy var originalPriceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    private lazy var originalPriceLabel: UILabel = {
+    private lazy var convertedPriceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.textColor = .darkGray
@@ -45,14 +45,14 @@ final class TransactionCell: UITableViewCell {
         contentView.addSubview(originalPriceLabel)
 
         NSLayoutConstraint.activate([
-            convertedPriceLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            convertedPriceLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            convertedPriceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            originalPriceLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            originalPriceLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            originalPriceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
             ])
 
         NSLayoutConstraint.activate([
-            originalPriceLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            originalPriceLabel.centerYAnchor.constraint(equalTo: convertedPriceLabel.centerYAnchor)
+            convertedPriceLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            convertedPriceLabel.centerYAnchor.constraint(equalTo: originalPriceLabel.centerYAnchor)
             ])
     }
 

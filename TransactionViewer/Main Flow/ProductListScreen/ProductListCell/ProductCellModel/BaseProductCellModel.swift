@@ -8,20 +8,23 @@
 
 final class BaseProductCellModel: ProductCellModel {
 
-    var title: String
+    var title: String {
+        return product.sku
+    }
     var detailsText: String
 
+    private let product: Product
     private weak var delegate: ProductCellModelDelegate?
 
     init(product: Product, delegate: ProductCellModelDelegate) {
-        title = product.sku
+        self.product = product
         let transactionCountText = product.transactions.count == 1 ? "transaction" : "transactions"
         detailsText = "\(product.transactions.count) \(transactionCountText)"
         self.delegate = delegate
     }
 
     func select() {
-        delegate?.productCellViewModelDidSelected(self)
+        delegate?.productCellViewModelDidSelected(self, with: product)
     }
 
 }

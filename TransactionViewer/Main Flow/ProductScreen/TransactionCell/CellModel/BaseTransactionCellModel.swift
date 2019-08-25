@@ -13,9 +13,9 @@ final class BaseTransactionCellModel: TransactionCellModel {
     var poundText: String
     var originalText: String
 
-    init(poundText: String, originalText: String) {
-        self.poundText = poundText
-        self.originalText = originalText
+    init(transaction: Transaction, rate: Double) {
+        poundText = "\(Currency.gbp.symbol)\(transaction.amount * rate)"
+        originalText = "\(transaction.currency.symbol)\(transaction.amount)"
     }
 
 }

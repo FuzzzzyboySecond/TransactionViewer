@@ -11,7 +11,7 @@ import XCTest
 
 class ProductCellModelTests: XCTestCase {
 
-    var completion: ((ProductCellModel) -> Void)?
+    var completion: ((Product) -> Void)?
 
     override func tearDown() {
         completion = nil
@@ -50,25 +50,23 @@ class ProductCellModelTests: XCTestCase {
 
     func test_select() {
         // given
-        let product = Product(sku: "A", transactions: [Transaction(sku: "a", currency: .usd, amount: 1)])
-        let expectedTitle = "A"
+        let expectedProduct = Product(sku: "A", transactions: [Transaction(sku: "a", currency: .usd, amount: 1)])
 
         // then
-        completion = { cellModel in
-            XCTAssertEqual(expectedTitle, cellModel.title)
+        completion = { product in
+            XCTAssertEqual(expectedProduct, product)
         }
 
         // when
-        let cellModel = BaseProductCellModel(product: product, delegate: self)
+        let cellModel = BaseProductCellModel(product: expectedProduct, delegate: self)
         cellModel.select()
     }
 
 }
 
 extension ProductCellModelTests: ProductCellModelDelegate {
-
-    func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
-        completion?(cellModel)
+    func productCellViewModelDidSelected(_ cellModel: ProductCellModel, with product: Product) {
+        completion?(product)
     }
 
 }

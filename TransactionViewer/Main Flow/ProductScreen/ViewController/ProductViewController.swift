@@ -12,7 +12,7 @@ final class ProductViewController: UIViewController {
 
     private lazy var totalLabel: UILabel = {
         let label = UILabel()
-        label.text = "Total £9,609.17"
+        label.text = "Total £1,000.00"
         label.font = UIFont.preferredFont(forTextStyle: .title2)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
