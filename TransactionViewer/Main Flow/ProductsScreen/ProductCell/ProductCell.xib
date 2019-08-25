@@ -23,14 +23,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-MR-j5B">
+                        <rect key="frame" x="352" y="19.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ezL-eP-lcY" firstAttribute="top" secondItem="i4f-1a-g7g" secondAttribute="top" constant="16" id="Ti8-bC-Kdc"/>
+                    <constraint firstAttribute="trailing" secondItem="6UY-MR-j5B" secondAttribute="trailing" constant="20" id="ZXA-H3-kuc"/>
                     <constraint firstItem="ezL-eP-lcY" firstAttribute="leading" secondItem="i4f-1a-g7g" secondAttribute="leading" constant="20" id="ar7-er-J0u"/>
+                    <constraint firstItem="6UY-MR-j5B" firstAttribute="centerY" secondItem="ezL-eP-lcY" secondAttribute="centerY" id="gnl-Gd-mDu"/>
                     <constraint firstAttribute="bottom" secondItem="ezL-eP-lcY" secondAttribute="bottom" constant="16" id="hLh-L9-X5g"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="detailsLabel" destination="6UY-MR-j5B" id="56Q-dK-mXC"/>
                 <outlet property="titleLabel" destination="ezL-eP-lcY" id="lIu-md-w3U"/>
             </connections>
             <point key="canvasLocation" x="192.75362318840581" y="113.16964285714285"/>

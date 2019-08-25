@@ -8,5 +8,5 @@
 
 protocol ProductCellModel {
     var title: String { get }
-    var detailedText: String { get }
+    var detailsText: String { get }
 }

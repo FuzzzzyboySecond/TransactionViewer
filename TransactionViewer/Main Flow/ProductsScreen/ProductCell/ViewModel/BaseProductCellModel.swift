@@ -9,11 +9,11 @@
 final class BaseProductCellModel: ProductCellModel {
 
     var title: String
-    var detailedText: String
+    var detailsText: String
 
     init(title: String, transactionsCount: Int) {
         self.title = title
-        detailedText = "\(transactionsCount) transactions"
+        detailsText = "\(transactionsCount) transactions"
     }
 
 }
