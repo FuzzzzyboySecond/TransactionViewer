@@ -13,7 +13,8 @@ final class BaseProductCellModel: ProductCellModel {
 
     init(title: String, transactionsCount: Int) {
         self.title = title
-        detailsText = "\(transactionsCount) transactions"
+        let transactionCountText = transactionsCount == 1 ? "transaction" : "transactions"
+        detailsText = "\(transactionsCount) \(transactionCountText)"
     }
 
 }
