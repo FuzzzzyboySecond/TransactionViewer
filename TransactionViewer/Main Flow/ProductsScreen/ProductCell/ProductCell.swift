@@ -10,8 +10,10 @@ import UIKit
 
 final class ProductCell: UITableViewCell {
 
-    func configure(with indexPath: IndexPath) {
-        textLabel?.text = "Cell \(indexPath.row)"
+    @IBOutlet private weak var titleLabel: UILabel!
+
+    func configure(with cellModel: ProductCellModel) {
+        titleLabel.text = cellModel.title
     }
 
 }

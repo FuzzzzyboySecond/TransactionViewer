@@ -6,9 +6,14 @@
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-//final class BaseProductCellModel: ProductCellModel {
-//
-//    var title: String
-//    var transactionsCount: Int
-//
-//}
+final class BaseProductCellModel: ProductCellModel {
+
+    var title: String
+    var detailedText: String
+
+    init(title: String, transactionsCount: Int) {
+        self.title = title
+        detailedText = "\(transactionsCount) transactions"
+    }
+
+}
