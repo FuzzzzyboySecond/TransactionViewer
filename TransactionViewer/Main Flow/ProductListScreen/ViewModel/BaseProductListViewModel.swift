@@ -1,18 +1,18 @@
 //
-//  BaseProductsViewModel.swift
+//  BaseProductListViewModel.swift
 //  TransactionViewer
 //
 //  Created by Kirill Shakhansky on 25/08/2019.
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-final class BaseProductsViewModel: ProductsViewModel {
+final class BaseProductListViewModel: ProductListViewModel {
 
     var cellModels = [ProductCellModel]()
 
-    private weak var delegate: ProductsViewModelDelegate?
+    private weak var delegate: ProductListViewModelDelegate?
 
-    init(delegate: ProductsViewModelDelegate) {
+    init(delegate: ProductListViewModelDelegate) {
         self.delegate = delegate
         cellModels = [
             BaseProductCellModel(title: "A0911", transactionsCount: 424, delegate: self),
@@ -25,10 +25,10 @@ final class BaseProductsViewModel: ProductsViewModel {
 
 }
 
-extension BaseProductsViewModel: ProductCellModelDelegate {
+extension BaseProductListViewModel: ProductCellModelDelegate {
 
     func productCellViewModelDidSelected(_ cellModel: ProductCellModel) {
-        delegate?.productsViewModel(self, didSelectProduct: Product(title: cellModel.title, transactions: []))
+        delegate?.productListViewModel(self, didSelectProduct: Product(title: cellModel.title, transactions: []))
     }
 
 }

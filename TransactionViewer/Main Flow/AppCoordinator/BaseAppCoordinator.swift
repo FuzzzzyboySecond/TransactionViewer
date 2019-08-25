@@ -23,8 +23,8 @@ final class BaseAppCoordinator: AppCoordinator {
     }
 
     private func configureRootViewController() {
-        let viewController: ProductsViewController = ProductsViewController.instantiateFromStoryboard()!
-        viewController.viewModel = BaseProductsViewModel(delegate: self)
+        let viewController: ProductListViewController = ProductListViewController.instantiateFromStoryboard()!
+        viewController.viewModel = BaseProductListViewModel(delegate: self)
         rootViewController = UINavigationController(rootViewController: viewController)
     }
 
@@ -36,9 +36,9 @@ final class BaseAppCoordinator: AppCoordinator {
 
 }
 
-extension BaseAppCoordinator: ProductsViewModelDelegate {
+extension BaseAppCoordinator: ProductListViewModelDelegate {
 
-    func productsViewModel(_ viewModel: ProductsViewModel, didSelectProduct product: Product) {
+    func productListViewModel(_ viewModel: ProductListViewModel, didSelectProduct product: Product) {
         routeToTransactions(with: product)
     }
 
