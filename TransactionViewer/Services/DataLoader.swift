@@ -14,5 +14,5 @@ enum DataLoaderError: Error {
 }
 
 protocol DataLoader {
-    func loadData(from url: URL) -> Result<Data, DataLoaderError>
+    func loadData(from url: URL, completion: @escaping (Result<Data, DataLoaderError>) -> Void)
 }

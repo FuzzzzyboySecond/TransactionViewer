@@ -10,13 +10,16 @@ import Foundation
 
 final class BaseDataLoader: DataLoader {
 
-    func loadData(from url: URL) -> Result<Data, DataLoaderError> {
-        guard url.isFileURL else { return .failure(.notLocalURL) }
-        do {
-            let data = try Data(contentsOf: url)
-            return .success(data)
-        } catch {
-            return .failure(.invalideData)
+    func loadData(from url: URL, completion: @escaping (Result<Data, DataLoaderError>) -> Void) {
+        // imitation async
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            guard url.isFileURL else { return completion(.failure(.notLocalURL)) }
+            do {
+                let data = try Data(contentsOf: url)
+                return completion(.success(data))
+            } catch {
+                return completion(.failure(.invalideData))
+            }
         }
     }
 

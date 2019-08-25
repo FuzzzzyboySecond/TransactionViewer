@@ -12,13 +12,17 @@ import XCTest
 class DataLoaderTests: XCTestCase {
 
     var dataLoader: DataLoader!
+    var expectation: XCTestExpectation!
+    let timeout: TimeInterval = 3
 
     override func setUp() {
         super.setUp()
         dataLoader = BaseDataLoader()
+        expectation = expectation(description: "loadData expectation")
     }
 
     override func tearDown() {
+        expectation = nil
         dataLoader = nil
         super.tearDown()
     }
@@ -33,10 +37,13 @@ class DataLoaderTests: XCTestCase {
         }
 
         // when
-        let result = dataLoader.loadData(from: url)
+        dataLoader.loadData(from: url) { result in
+            // then
+            XCTAssertEqual(expected, try? result.get())
+            self.expectation.fulfill()
+        }
+        waitForExpectations(timeout: timeout)
 
-        // then
-        XCTAssertEqual(expected, try? result.get())
     }
 
     func test_load_notLocalURL() {
@@ -45,10 +52,13 @@ class DataLoaderTests: XCTestCase {
         let expectedError: DataLoaderError = .notLocalURL
 
         // when
-        let result = dataLoader.loadData(from: url)
+        dataLoader.loadData(from: url) { result in
+            // then
+            XCTAssertEqual(expectedError, result.error)
+            self.expectation.fulfill()
+        }
+        waitForExpectations(timeout: timeout)
 
-        // then
-        XCTAssertEqual(expectedError, result.error)
     }
 
     func test_invalide_data() {
@@ -62,10 +72,13 @@ class DataLoaderTests: XCTestCase {
         let expectedError: DataLoaderError = .invalideData
 
         // when
-        let result = dataLoader.loadData(from: url)
+        dataLoader.loadData(from: url) { result in
+            // then
+            XCTAssertEqual(expectedError, result.error)
+            self.expectation.fulfill()
+        }
+        waitForExpectations(timeout: timeout)
 
-        // then
-        XCTAssertEqual(expectedError, result.error)
     }
 
 }
