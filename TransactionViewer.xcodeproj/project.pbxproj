@@ -15,6 +15,7 @@
 		BA5BBF102311936E00A48AB5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF0F2311936E00A48AB5 /* AppContainer.swift */; };
 		BA5BBF1D23119F6100A48AB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1C23119F6100A48AB5 /* AppCoordinator.swift */; };
 		BA5BBF1F23119FB000A48AB5 /* BaseAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */; };
+		BADA42E62312B0050041FF0D /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA42E52312B0050041FF0D /* TransactionsViewController.swift */; };
 		BAE4B7612312583B00B666A8 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7602312583B00B666A8 /* ProductsViewController.swift */; };
 		BAE4B7632312587400B666A8 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE4B7622312587400B666A8 /* ProductsViewController.storyboard */; };
 		BAE4B7662312590C00B666A8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7652312590C00B666A8 /* UIViewController+Extensions.swift */; };
@@ -55,6 +56,7 @@
 		BA5BBF1E23119FB000A48AB5 /* BaseAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppCoordinator.swift; sourceTree = "<group>"; };
 		BA7FC0B123114CCA00EE5233 /* TransactionViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7FC0B523114CCA00EE5233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADA42E52312B0050041FF0D /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		BAE4B7602312583B00B666A8 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		BAE4B7622312587400B666A8 /* ProductsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductsViewController.storyboard; sourceTree = "<group>"; };
 		BAE4B7652312590C00B666A8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		BA5BBF1A23119EFF00A48AB5 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
+				BADA42E12312AFBA0041FF0D /* TransactionsScreen */,
 				BAE4B75F2312582700B666A8 /* ProductsScreen */,
 				BA5BBF1B23119F1500A48AB5 /* AppCoordinator */,
 			);
@@ -186,6 +189,22 @@
 				BA7FC0B523114CCA00EE5233 /* Info.plist */,
 			);
 			path = TransactionViewerTests;
+			sourceTree = "<group>";
+		};
+		BADA42E12312AFBA0041FF0D /* TransactionsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BADA42E22312AFC80041FF0D /* ViewController */,
+			);
+			path = TransactionsScreen;
+			sourceTree = "<group>";
+		};
+		BADA42E22312AFC80041FF0D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BADA42E52312B0050041FF0D /* TransactionsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		BAE4B75F2312582700B666A8 /* ProductsScreen */ = {
@@ -456,6 +475,7 @@
 				BAE4B7722312680800B666A8 /* BaseProductCellModel.swift in Sources */,
 				BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */,
 				BAE4B770231267CE00B666A8 /* ProductCellModel.swift in Sources */,
+				BADA42E62312B0050041FF0D /* TransactionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,11 +24,6 @@ final class ProductsViewController: UIViewController {
         configureTableView()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureNavigationItem()
-    }
-
     private func configureNavigationItem() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = Constants.navigationTitle
