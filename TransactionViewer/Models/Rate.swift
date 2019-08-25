@@ -6,7 +6,7 @@
 //  Copyright © 2019 Kirill Shakhansky. All rights reserved.
 //
 
-struct Rate: Decodable {
+struct Rate: Decodable, Equatable {
 
     let source: String
     let destination: String
@@ -16,6 +16,12 @@ struct Rate: Decodable {
         case source = "from"
         case destination = "to"
         case value = "rate"
+    }
+
+    init(source: String, destination: String, value: String) {
+        self.source = source
+        self.destination = destination
+        self.value = value
     }
 
     init(from decoder: Decoder) throws {

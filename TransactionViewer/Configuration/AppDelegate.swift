@@ -24,19 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         appCoordinator.start(in: window)
 
-        let dataLoader = appContainer.resolve(DataLoader.self)!
-        let mapper = appContainer.resolve(RateMapper.self)!
-        dataLoader.loadData(from: .rates) { result in
-            switch result {
-            case .success(let data):
-                print("success")
-                let rates = mapper.mapRates(from: data)
-                print("rates: \(rates)")
-            case .failure:
-                print("failure")
-            }
-        }
-
         return true
     }
 

@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum RateMapperError: Error {
+    case decoding
+}
+
 protocol RateMapper {
-    func mapRates(from data: Data) -> [Rate]
+    func mapRates(from data: Data) -> Result<[Rate], RateMapperError>
 }
