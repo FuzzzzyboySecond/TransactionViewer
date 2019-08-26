@@ -10,7 +10,11 @@ final class BaseProductViewModel: ProductViewModel {
 
     private enum Constants {
         static let baseCurrency: Currency = .gbp
-        static let rates = [Rate(source: .cad, destination: .gbp, value: 0.61)]
+        static let rates = [
+            Rate(source: .cad, destination: .gbp, value: 0.61),
+            Rate(source: .usd, destination: .gbp, value: 0.77),
+            Rate(source: .aud, destination: .gbp, value: 1.2)
+        ]
     }
 
     var title: String {

@@ -14,8 +14,6 @@
 		BA25D8B12312CFFF00D0411C /* DataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25D8B02312CFFF00D0411C /* DataLoaderTests.swift */; };
 		BA25D8B42312D08300D0411C /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA25D8B32312D08300D0411C /* rates.plist */; };
 		BA25D8B82312D4E000D0411C /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25D8B72312D4E000D0411C /* Result+Extensions.swift */; };
-		BA28E13B23131E9D00FB641A /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA28E13923131E9D00FB641A /* rates.plist */; };
-		BA28E13C23131E9D00FB641A /* transactions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA28E13A23131E9D00FB641A /* transactions.plist */; };
 		BA3A091F231135C50041B1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A091E231135C50041B1DB /* AppDelegate.swift */; };
 		BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0925231135C60041B1DB /* Assets.xcassets */; };
 		BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A0927231135C60041B1DB /* LaunchScreen.storyboard */; };
@@ -54,6 +52,8 @@
 		BAE4B7852312798E00B666A8 /* ProductCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B7842312798E00B666A8 /* ProductCellModelTests.swift */; };
 		BAE4B78923127F9500B666A8 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B78823127F9500B666A8 /* ProductListViewModel.swift */; };
 		BAE4B78B23127FC300B666A8 /* BaseProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4B78A23127FC300B666A8 /* BaseProductListViewModel.swift */; };
+		BAED5F7B2313C541009082AB /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAED5F792313C541009082AB /* rates.plist */; };
+		BAED5F7C2313C541009082AB /* transactions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAED5F7A2313C541009082AB /* transactions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +76,6 @@
 		BA25D8B02312CFFF00D0411C /* DataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderTests.swift; sourceTree = "<group>"; };
 		BA25D8B32312D08300D0411C /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
 		BA25D8B72312D4E000D0411C /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
-		BA28E13923131E9D00FB641A /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
-		BA28E13A23131E9D00FB641A /* transactions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions.plist; sourceTree = "<group>"; };
 		BA3A091B231135C50041B1DB /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A091E231135C50041B1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3A0925231135C60041B1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +118,8 @@
 		BAE4B7842312798E00B666A8 /* ProductCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModelTests.swift; sourceTree = "<group>"; };
 		BAE4B78823127F9500B666A8 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		BAE4B78A23127FC300B666A8 /* BaseProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProductListViewModel.swift; sourceTree = "<group>"; };
+		BAED5F792313C541009082AB /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
+		BAED5F7A2313C541009082AB /* transactions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions.plist; sourceTree = "<group>"; };
 		BCB46A029D40B3368AB7FDC5 /* Pods-TransactionViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionViewerTests/Pods-TransactionViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F81E899600599C675914F734 /* Pods-TransactionViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionViewer.release.xcconfig"; path = "Target Support Files/Pods-TransactionViewer/Pods-TransactionViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,8 +177,8 @@
 		BA25D8AC2312CF7700D0411C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BA28E13923131E9D00FB641A /* rates.plist */,
-				BA28E13A23131E9D00FB641A /* transactions.plist */,
+				BAED5F792313C541009082AB /* rates.plist */,
+				BAED5F7A2313C541009082AB /* transactions.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -579,11 +579,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3A0929231135C60041B1DB /* LaunchScreen.storyboard in Resources */,
-				BA28E13B23131E9D00FB641A /* rates.plist in Resources */,
+				BAED5F7B2313C541009082AB /* rates.plist in Resources */,
 				BAE4B7822312737500B666A8 /* ProductCell.xib in Resources */,
 				BAE4B7632312587400B666A8 /* ProductListViewController.storyboard in Resources */,
 				BA3A0926231135C60041B1DB /* Assets.xcassets in Resources */,
-				BA28E13C23131E9D00FB641A /* transactions.plist in Resources */,
+				BAED5F7C2313C541009082AB /* transactions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
