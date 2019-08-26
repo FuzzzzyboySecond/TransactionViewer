@@ -9,6 +9,8 @@
 protocol ProductViewModel {
 
     var title: String { get }
-    var cellModels: [TransactionCellModel] { get }
+    var cellModels: Dynamic<[TransactionCellModel]> { get }
+
+    func updateRates()
 
 }

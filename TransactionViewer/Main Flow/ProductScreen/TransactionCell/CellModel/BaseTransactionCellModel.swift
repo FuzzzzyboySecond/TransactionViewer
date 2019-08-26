@@ -14,7 +14,8 @@ final class BaseTransactionCellModel: TransactionCellModel {
     var originalText: String
 
     init(transaction: Transaction, rate: Double) {
-        poundText = "\(Currency.gbp.symbol)\(transaction.amount * rate)"
+        let convertedAmount = (transaction.amount * rate * 100).rounded(.toNearestOrEven) / 100.0
+        poundText = "\(Currency.gbp.symbol)\(convertedAmount)"
         originalText = "\(transaction.currency.symbol)\(transaction.amount)"
     }
 
