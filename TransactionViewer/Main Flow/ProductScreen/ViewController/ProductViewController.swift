@@ -12,7 +12,6 @@ final class ProductViewController: UIViewController {
 
     private lazy var totalLabel: UILabel = {
         let label = UILabel()
-        label.text = "Total £1,000.00"
         label.font = UIFont.preferredFont(forTextStyle: .title2)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -34,6 +33,8 @@ final class ProductViewController: UIViewController {
         view.backgroundColor = .white
         configureNavigationItem()
         configureSubviews()
+        bindViewModel()
+        viewModel?.updateRates()
     }
 
     private func configureNavigationItem() {
@@ -60,17 +61,30 @@ final class ProductViewController: UIViewController {
             ])
     }
 
+    private func bindViewModel() {
+        viewModel?.cellModels.bind { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+        viewModel?.totalText.bind { [weak self] text in
+            DispatchQueue.main.async {
+                self?.totalLabel.text = text
+            }
+        }
+    }
+
 }
 
 extension ProductViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.cellModels.count ?? 0
+        return viewModel?.cellModels.value.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(for: TransactionCell.self, indexPath: indexPath),
-            let cellModel = viewModel?.cellModels[indexPath.row]
+            let cellModel = viewModel?.cellModels.value[indexPath.row]
             else { fatalError("Can't dequeue TransactionCell") }
         cell.configure(with: cellModel)
         return cell

@@ -36,7 +36,8 @@ final class BaseAppCoordinator: AppCoordinator {
 
     private func routeToProductScreen(with product: Product) {
         let viewController = ProductViewController()
-        viewController.viewModel = BaseProductViewModel(product: product)
+        viewController.viewModel = BaseProductViewModel(product: product,
+                                                        rateService: container.resolve(RateService.self)!)
         rootViewController?.pushViewController(viewController, animated: true)
     }
 
