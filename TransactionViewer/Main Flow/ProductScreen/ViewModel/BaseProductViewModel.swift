@@ -10,6 +10,7 @@ final class BaseProductViewModel: ProductViewModel {
 
     private enum Constants {
         static let baseCurrency: Currency = .gbp
+        static let rates = [Rate(source: .cad, destination: .gbp, value: 0.61)]
     }
 
     var cellModels = Dynamic([TransactionCellModel]())
@@ -57,6 +58,11 @@ final class BaseProductViewModel: ProductViewModel {
         if let rate = rates.first(where: { $0.destination == Constants.baseCurrency && $0.source == currency }) {
             return rate.value
         }
-        return 0.5
+        if let rate = Constants.rates.first(where: {
+            $0.destination == Constants.baseCurrency && $0.source == currency
+        }) {
+            return rate.value
+        }
+        return nil
     }
 }
