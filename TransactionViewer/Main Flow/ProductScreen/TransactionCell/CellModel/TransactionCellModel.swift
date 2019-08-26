@@ -9,4 +9,5 @@
 protocol TransactionCellModel {
     var poundText: String { get }
     var originalText: String { get }
+    var poundsAmount: Double { get }
 }

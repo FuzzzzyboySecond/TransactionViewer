@@ -25,6 +25,7 @@ final class Dynamic<T> {
 
     func bind(listener: Listener?) {
         self.listener = listener
+        listener?(value)
     }
 
 }

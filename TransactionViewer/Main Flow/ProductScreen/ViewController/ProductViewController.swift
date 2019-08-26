@@ -12,7 +12,6 @@ final class ProductViewController: UIViewController {
 
     private lazy var totalLabel: UILabel = {
         let label = UILabel()
-        label.text = "Total £1,000.00"
         label.font = UIFont.preferredFont(forTextStyle: .title2)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -34,6 +33,7 @@ final class ProductViewController: UIViewController {
         view.backgroundColor = .white
         configureNavigationItem()
         configureSubviews()
+        bindViewModel()
         viewModel?.updateRates()
     }
 
@@ -59,6 +59,19 @@ final class ProductViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 
             ])
+    }
+
+    private func bindViewModel() {
+        viewModel?.cellModels.bind { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+        viewModel?.totalText.bind { [weak self] text in
+            DispatchQueue.main.async {
+                self?.totalLabel.text = text
+            }
+        }
     }
 
 }

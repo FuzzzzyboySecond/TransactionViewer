@@ -9,6 +9,7 @@
 protocol ProductViewModel {
 
     var title: String { get }
+    var totalText: Dynamic<String> { get }
     var cellModels: Dynamic<[TransactionCellModel]> { get }
 
     func updateRates()

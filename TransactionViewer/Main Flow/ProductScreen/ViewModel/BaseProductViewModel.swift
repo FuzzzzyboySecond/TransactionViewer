@@ -13,15 +13,15 @@ final class BaseProductViewModel: ProductViewModel {
         static let rates = [Rate(source: .cad, destination: .gbp, value: 0.61)]
     }
 
-    var cellModels = Dynamic([TransactionCellModel]())
+    var title: String {
+        return "Transactions for \(product.sku)"
+    }
+    let totalText = Dynamic("")
+    let cellModels = Dynamic([TransactionCellModel]())
 
     private let rateService: RateService
     private let product: Product
     private var rates = [Rate]()
-
-    var title: String {
-        return "Transactions for \(product.sku)"
-    }
 
     init(product: Product, rateService: RateService) {
         self.product = product
@@ -29,13 +29,12 @@ final class BaseProductViewModel: ProductViewModel {
     }
 
     func updateRates() {
-        print("=== update rates")
         rateService.loadRates { [weak self] result in
             switch result {
             case .success(let rates):
-                print("=== success")
                 self?.rates = rates
                 self?.updateCellModels()
+                self?.updateTitle()
             case .failure(let error):
                 print("=== failure \(error)")
             }
@@ -64,5 +63,11 @@ final class BaseProductViewModel: ProductViewModel {
             return rate.value
         }
         return nil
+    }
+
+    private func updateTitle() {
+        let total = cellModels.value.reduce(0, { $0 + $1.poundsAmount })
+        let rounded = (total * 100).rounded(.toNearestOrEven) / 100
+        totalText.value = "Total \(Constants.baseCurrency.symbol)\(rounded)"
     }
 }
